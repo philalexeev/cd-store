@@ -13,55 +13,68 @@ export default {
           albums: [
             {
               title: 'Please Please Me',
-              year: 1963
+              year: 1963,
+              coverUrl: '../assets/products/beatles/ppm.jpg'
             },
             {
               title: 'With The Beatles',
-              year: 1963
+              year: 1963,
+              coverUrl: '../assets/products/beatles/wtb.jpg'
             },
             {
               title: 'A Hard Day’s Night',
-              year: 1964
+              year: 1964,
+              coverUrl: '../assets/products/beatles/hdn.jpg'
             },
             {
               title: 'Beatles For Sale',
-              year: 1964
+              year: 1964,
+              coverUrl: '../assets/products/beatles/bfs.jpg'
             },
             {
               title: 'Help!',
-              year: 1965
+              year: 1965,
+              coverUrl: '../assets/products/beatles/help.jpg'
             },
             {
               title: 'Rubber Soul',
-              year: 1965
+              year: 1965,
+              coverUrl: '../assets/products/beatles/rs.jpg'
             },
             {
               title: 'Revolver',
-              year: 1966
+              year: 1966,
+              coverUrl: '../assets/products/beatles/revolver.jpg'
             },
             {
               title: 'Sgt. Pepper’s Lonely Hearts Club Band',
-              year: 1967
+              year: 1967,
+              coverUrl: '../assets/products/beatles/sp.jpg'
             },
             {
               title: 'Magical Mystery Tour',
-              year: 1967
+              year: 1967,
+              coverUrl: '../assets/products/beatles/mmt.jpg'
             },
             {
               title: 'The Beatles',
-              year: 1968
+              year: 1968,
+              coverUrl: '../assets/products/beatles/wa.jpg'
             },
             {
               title: 'Yellow Submarine',
-              year: 1969
+              year: 1969,
+              coverUrl: '../assets/products/beatles/ys.jpg'
             },
             {
               title: 'Abbey Road',
-              year: 1969
+              year: 1969,
+              coverUrl: '../assets/products/beatles/ar.jpg'
             },
             {
               title: 'Let It Be',
-              year: 1970
+              year: 1970,
+              coverUrl: '../assets/products/beatles/lib.jpg'
             }
           ]
         },
