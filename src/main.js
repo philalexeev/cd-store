@@ -29,7 +29,12 @@ const store = new Vuex.Store({
   },
   mutations: {
     increase(state, payload) {
-      state.counter += payload.amount
+      state.counter += payload
+    }
+  },
+  actions: {
+    add({ commit }) {
+      commit('increase')
     }
   }
 })

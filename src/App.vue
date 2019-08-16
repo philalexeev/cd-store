@@ -5,6 +5,7 @@
     <p>counter is {{ counter }}</p>
     <p>amount is {{ amount }}</p>
     <button @click="increase(7)">Increment</button>
+    <button @click="add">Increment from Actions</button>
     <ul>
       <li v-for="todo in doneTodos" :key="todo.id">{{ todo.id }} --- {{ todo.done }}</li>
     </ul>
@@ -34,7 +35,10 @@ export default {
   methods: {
     ...mapMutations([
       'increase'
-    ])
+    ]),
+    add() {
+      this.$store.dispatch('add', 7)
+    }
   }
 }
 </script>
