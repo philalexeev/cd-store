@@ -41,4 +41,20 @@ export default {
       width: 80%;
     }
   }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in;
+    
+    &--blue {
+      color: #fff;
+      background-color: #09c;
+    }
+    
+    &:hover {
+      background-color: darken(#09c, 10%);
+    }
+  }
 </style>

@@ -1,11 +1,29 @@
 <template>
-  <h1>Products</h1>
+  <div class="component products">
+    <h1 class="component__heading">Products</h1>
+    <div class="products" v-for="band in products" :key="band.name.length*Math.random()*500">
+      <ul class="products__list">
+        <li
+          class="products__list-item"
+          v-for="productItem in band.albums"
+          :key="productItem.title.length*Math.random()*500">
+          <app-product-item
+            :albumTitle="productItem.title"
+            :bandName="band.name"
+            :albumYear="productItem.year"
+          ></app-product-item>
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
+import ProductItem from './ProductItem'
+
 export default {
   name: 'Products',
-  data() {
+  data () {
     return {
       products: [
         {
@@ -186,10 +204,28 @@ export default {
         }
       ]
     }
+  },
+  components: {
+    'app-product-item': ProductItem
   }
 }
 </script>
 
-<style scoped>
-
+<style>
+  .component {
+    padding: 20px;
+  }
+  .component__heading {
+    font-size: 40px;
+  }
+  .products__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  .products__list-item {
+    display: flex;
+    align-items: stretch;
+  }
 </style>
