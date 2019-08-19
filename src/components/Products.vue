@@ -11,6 +11,7 @@
             :albumTitle="productItem.title"
             :bandName="band.name"
             :albumYear="productItem.year"
+            :productPrice="productItem.price"
           ></app-product-item>
         </li>
       </ul>
@@ -32,67 +33,80 @@ export default {
             {
               title: 'Please Please Me',
               year: 1963,
-              coverUrl: '../assets/products/beatles/ppm.jpg'
+              coverUrl: '../assets/products/beatles/ppm.jpg',
+              price: 50
             },
             {
               title: 'With The Beatles',
               year: 1963,
-              coverUrl: '../assets/products/beatles/wtb.jpg'
+              coverUrl: '../assets/products/beatles/wtb.jpg',
+              price: 50
             },
             {
               title: 'A Hard Day’s Night',
               year: 1964,
-              coverUrl: '../assets/products/beatles/hdn.jpg'
+              coverUrl: '../assets/products/beatles/hdn.jpg',
+              price: 50
             },
             {
               title: 'Beatles For Sale',
               year: 1964,
-              coverUrl: '../assets/products/beatles/bfs.jpg'
+              coverUrl: '../assets/products/beatles/bfs.jpg',
+              price: 50
             },
             {
               title: 'Help!',
               year: 1965,
-              coverUrl: '../assets/products/beatles/help.jpg'
+              coverUrl: '../assets/products/beatles/help.jpg',
+              price: 50
             },
             {
               title: 'Rubber Soul',
               year: 1965,
-              coverUrl: '../assets/products/beatles/rs.jpg'
+              coverUrl: '../assets/products/beatles/rs.jpg',
+              price: 50
             },
             {
               title: 'Revolver',
               year: 1966,
-              coverUrl: '../assets/products/beatles/revolver.jpg'
+              coverUrl: '../assets/products/beatles/revolver.jpg',
+              price: 50
             },
             {
               title: 'Sgt. Pepper’s Lonely Hearts Club Band',
               year: 1967,
-              coverUrl: '../assets/products/beatles/sp.jpg'
+              coverUrl: '../assets/products/beatles/sp.jpg',
+              price: 50
             },
             {
               title: 'Magical Mystery Tour',
               year: 1967,
-              coverUrl: '../assets/products/beatles/mmt.jpg'
+              coverUrl: '../assets/products/beatles/mmt.jpg',
+              price: 50
             },
             {
               title: 'The Beatles',
               year: 1968,
-              coverUrl: '../assets/products/beatles/wa.jpg'
+              coverUrl: '../assets/products/beatles/wa.jpg',
+              price: 50
             },
             {
               title: 'Yellow Submarine',
               year: 1969,
-              coverUrl: '../assets/products/beatles/ys.jpg'
+              coverUrl: '../assets/products/beatles/ys.jpg',
+              price: 50
             },
             {
               title: 'Abbey Road',
               year: 1969,
-              coverUrl: '../assets/products/beatles/ar.jpg'
+              coverUrl: '../assets/products/beatles/ar.jpg',
+              price: 50
             },
             {
               title: 'Let It Be',
               year: 1970,
-              coverUrl: '../assets/products/beatles/lib.jpg'
+              coverUrl: '../assets/products/beatles/lib.jpg',
+              price: 50
             }
           ]
         },
@@ -101,39 +115,48 @@ export default {
           albums: [
             {
               title: 'Led Zeppelin',
-              year: 1969
+              year: 1969,
+              price: 50
             },
             {
               title: 'Led Zeppelin II',
-              year: 1969
+              year: 1969,
+              price: 50
             },
             {
               title: 'Led Zeppelin III',
-              year: 1970
+              year: 1970,
+              price: 50
             },
             {
               title: 'Led Zeppelin IV',
-              year: 1971
+              year: 1971,
+              price: 50
             },
             {
               title: 'Houses of the Holy',
-              year: 1973
+              year: 1973,
+              price: 50
             },
             {
               title: 'Physical Graffiti',
-              year: 1975
+              year: 1975,
+              price: 50
             },
             {
               title: 'Presence',
-              year: 1976
+              year: 1976,
+              price: 50
             },
             {
               title: 'In Through the Out Door',
-              year: 1979
+              year: 1979,
+              price: 50
             },
             {
               title: 'Coda',
-              year: 1982
+              year: 1982,
+              price: 50
             }
           ]
         },
@@ -142,63 +165,78 @@ export default {
           albums: [
             {
               title: 'The Piper at the Gates of Dawn',
-              year: 1967
+              year: 1967,
+              price: 50
             },
             {
               title: 'A Saucerful of Secrets',
-              year: 1968
+              year: 1968,
+              price: 50
             },
             {
               title: 'Music from the Film More',
-              year: 1969
+              year: 1969,
+              price: 50
             },
             {
               title: 'Ummagumma',
-              year: 1969
+              year: 1969,
+              price: 50
             },
             {
               title: 'Atom Heart Mother',
-              year: 1970
+              year: 1970,
+              price: 50
             },
             {
               title: 'Meddle',
-              year: 1971
+              year: 1971,
+              price: 50
             },
             {
               title: 'Obscured by Clouds',
-              year: 1972
+              year: 1972,
+              price: 50
             },
             {
               title: 'The Dark Side of the Moon',
-              year: 1973
+              year: 1973,
+              price: 50
             },
             {
               title: 'Wish You Were Here',
-              year: 1975
+              year: 1975,
+              price: 50
             },
             {
               title: 'Animals',
-              year: 1977
+              year: 1977,
+              price: 50
             },
             {
               title: 'The Wall',
-              year: 1979
+              year: 1979,
+              price: 50
             },
             {
               title: 'The Final Cut',
-              year: 1983
+              year: 1983,
+              price: 50
             },
             {
               title: 'A Momentary Lapse of Reason',
-              year: 1987
+              year: 1987,
+              price: 50
             },
             {
               title: 'The Division Bell',
-              year: 1994
+              year: 1994,
+              price: 50
             },
             {
               title: 'The Endless River',
-              year: 2014
+              year: 2014,
+              price: 50
             }
           ]
         }
