@@ -5,7 +5,7 @@
       <h2 class="product__album-title">{{ albumTitle }}</h2>
       <h3 class="product__album-year">{{ albumYear }}</h3>
       <h3 class="product__band-name">{{ bandName }}</h3>
-      <button class="product__btn btn btn--blue" type="button" @click="addToCart">Add to cart</button>
+      <button class="product__btn btn btn--blue" type="button" @click="console">Add to cart</button>
     </div>
   </div>
 </template>
@@ -13,7 +13,20 @@
 <script>
 export default {
   name: 'ProductsItem',
-  props: ['albumTitle', 'bandName', 'albumYear', 'productPrice'],
+  props: {
+    albumTitle: String,
+    bandName: String,
+    albumYear: [String, Number],
+    productPrice: [String, Number],
+    albumCover: {
+      default: 'logo.png'
+    }
+  },
+  data() {
+    return {
+
+    }
+  },
   methods: {
     addToCart() {
       return this.$store.commit('addProduct', {
@@ -22,6 +35,9 @@ export default {
         albumTitle: this.albumTitle,
         price: this.productPrice
       })
+    },
+    console() {
+      console.log(this.albumCover)
     }
   }
 }
@@ -39,7 +55,7 @@ export default {
     position: relative;
     width: 250px;
     height: 250px;
-    background-color: darkgoldenrod;
+    /*background-color: darkgoldenrod;*/
 
     &::before,
     &::after {

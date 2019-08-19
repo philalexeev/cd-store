@@ -12,6 +12,7 @@
             :bandName="band.name"
             :albumYear="productItem.year"
             :productPrice="productItem.price"
+            :albumCover="productItem.coverUrl"
           ></app-product-item>
         </li>
       </ul>
@@ -33,79 +34,79 @@ export default {
             {
               title: 'Please Please Me',
               year: 1963,
-              coverUrl: '../assets/products/beatles/ppm.jpg',
+              coverUrl: 'ppm.jpg',
               price: 50
             },
             {
               title: 'With The Beatles',
               year: 1963,
-              coverUrl: '../assets/products/beatles/wtb.jpg',
+              coverUrl: 'wtb.jpg',
               price: 50
             },
             {
               title: 'A Hard Day’s Night',
               year: 1964,
-              coverUrl: '../assets/products/beatles/hdn.jpg',
+              coverUrl: 'hdn.jpg',
               price: 50
             },
             {
               title: 'Beatles For Sale',
               year: 1964,
-              coverUrl: '../assets/products/beatles/bfs.jpg',
+              coverUrl: 'bfs.jpg',
               price: 50
             },
             {
               title: 'Help!',
               year: 1965,
-              coverUrl: '../assets/products/beatles/help.jpg',
+              coverUrl: 'help.jpg',
               price: 50
             },
             {
               title: 'Rubber Soul',
               year: 1965,
-              coverUrl: '../assets/products/beatles/rs.jpg',
+              coverUrl: 'rs.jpg',
               price: 50
             },
             {
               title: 'Revolver',
               year: 1966,
-              coverUrl: '../assets/products/beatles/revolver.jpg',
+              coverUrl: 'revolver.jpg',
               price: 50
             },
             {
               title: 'Sgt. Pepper’s Lonely Hearts Club Band',
               year: 1967,
-              coverUrl: '../assets/products/beatles/sp.jpg',
+              coverUrl: 'sp.jpg',
               price: 50
             },
             {
               title: 'Magical Mystery Tour',
               year: 1967,
-              coverUrl: '../assets/products/beatles/mmt.jpg',
+              coverUrl: 'mmt.jpg',
               price: 50
             },
             {
               title: 'The Beatles',
               year: 1968,
-              coverUrl: '../assets/products/beatles/wa.jpg',
+              coverUrl: 'wa.jpg',
               price: 50
             },
             {
               title: 'Yellow Submarine',
               year: 1969,
-              coverUrl: '../assets/products/beatles/ys.jpg',
+              coverUrl: 'ys.jpg',
               price: 50
             },
             {
               title: 'Abbey Road',
               year: 1969,
-              coverUrl: '../assets/products/beatles/ar.jpg',
+              coverUrl: 'ar.jpg',
               price: 50
             },
             {
               title: 'Let It Be',
               year: 1970,
-              coverUrl: '../assets/products/beatles/lib.jpg',
+              coverUrl: 'lib.jpg',
               price: 50
             }
           ]
@@ -116,46 +117,55 @@ export default {
             {
               title: 'Led Zeppelin',
               year: 1969,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Led Zeppelin II',
               year: 1969,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Led Zeppelin III',
               year: 1970,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Led Zeppelin IV',
               year: 1971,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Houses of the Holy',
               year: 1973,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Physical Graffiti',
               year: 1975,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Presence',
               year: 1976,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'In Through the Out Door',
               year: 1979,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Coda',
               year: 1982,
+              coverUrl: '',
               price: 50
             }
           ]
@@ -166,76 +176,91 @@ export default {
             {
               title: 'The Piper at the Gates of Dawn',
               year: 1967,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'A Saucerful of Secrets',
               year: 1968,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Music from the Film More',
               year: 1969,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Ummagumma',
               year: 1969,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Atom Heart Mother',
               year: 1970,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Meddle',
               year: 1971,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Obscured by Clouds',
               year: 1972,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'The Dark Side of the Moon',
               year: 1973,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Wish You Were Here',
               year: 1975,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'Animals',
               year: 1977,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'The Wall',
               year: 1979,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'The Final Cut',
               year: 1983,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'A Momentary Lapse of Reason',
               year: 1987,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'The Division Bell',
               year: 1994,
+              coverUrl: '',
               price: 50
             },
             {
               title: 'The Endless River',
               year: 2014,
+              coverUrl: '',
               price: 50
             }
           ]
