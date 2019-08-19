@@ -9,7 +9,7 @@
           <a class="menu__link" href="#">Products</a>
         </router-link>
         <router-link to="/cart" tag="li" active-class="menu-item--active" class="menu__item">
-          <a class="menu__link" href="#">Cart</a>
+          <a class="menu__link" href="#">Cart{{cart.length ? `(${cart.length})` : ''}}</a>
         </router-link>
       </ul>
     </nav>
@@ -18,7 +18,12 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  data() {
+    return {
+      cart: this.$store.state.cart
+    }
+  },
 }
 </script>
 

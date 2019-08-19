@@ -5,16 +5,24 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    cart: [
-      {"bandName":"The Beatles","albumYear":1964,"albumTitle":"A Hard Day’s Night","price":50},
-      {"bandName":"The Beatles","albumYear":1963,"albumTitle":"With The Beatles","price":50},
-      {"bandName":"The Beatles","albumYear":1964,"albumTitle":"A Hard Day’s Night","price":50},
-      {"bandName":"The Beatles","albumYear":1965,"albumTitle":"Rubber Soul","price":50},
-      {"bandName":"The Beatles","albumYear":1965,"albumTitle":"Help!","price":50}]
+    cart: [],
+    totalSum: 0
+  },
+  getters: {
+    totalSum(state) {
+      state.totalSum = 0;
+      for ( let i = 0; i < state.cart.length; i++ ) {
+        state.totalSum += parseInt(state.cart[i].price)
+      }
+      return state.totalSum;
+    }
   },
   mutations: {
     addProduct(state, payload) {
-      state.cart.push(payload)
+      state.cart.unshift(payload)
+    },
+    removeItem(state, payload) {
+      return state.cart.splice(payload, 1)
     }
   }
 })
