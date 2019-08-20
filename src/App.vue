@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <app-header></app-header>
     <router-view></router-view>
   </div>
@@ -27,6 +27,11 @@ export default {
     width: 100%;
     height: 100%;
   }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
 
   .container {
     width: 100%;
@@ -48,13 +53,13 @@ export default {
     cursor: pointer;
     transition: background-color 0.1s ease-in;
     
-    &--blue {
+    &--orange {
       color: #fff;
-      background-color: #09c;
+      background-color: orangered;
     }
     
     &:hover {
-      background-color: darken(#09c, 10%);
+      background-color: darken(orangered, 10%);
     }
   }
 </style>

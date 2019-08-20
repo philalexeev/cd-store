@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <nav class="header__nav">
+    <nav class="header__nav container">
       <ul class="menu">
         <router-link to="/" tag="li" active-class="menu-item--active" class="menu__item" exact>
           <a class="menu__link" href="#">Home</a>
@@ -29,7 +29,7 @@ export default {
 
 <style scoped lang="scss">
   .header {
-    padding: 20px;
+    padding: 20px 0;
     background-color: #eee;
   }
 

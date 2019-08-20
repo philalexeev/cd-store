@@ -1,5 +1,5 @@
 <template>
-  <div class="component cart">
+  <div class="component container cart">
     <div class="component__heading-wrapper">
       <h1 class="component__heading">Cart</h1>
       <div class="total">Total: {{ totalSum }}$</div>
@@ -47,26 +47,37 @@ export default {
     justify-content: space-between;
     align-items: center;
   }
+  
   .cart__table {
     width: 100%;
     margin-top: 20px;
   }
+  
+  .cart__table tr {
+    transition: background-color 0.1s ease-in;
+  }
+  
   .cart__table tr:nth-child(odd) {
     background-color: #eee;
   }
+  
   .cart__table tr:hover {
     background-color: #ddd;
   }
+  
   .cart__table-cell {
     padding: 10px 20px;
     white-space: nowrap;
   }
+  
   .cart__table-cell:nth-child(3) {
     width: 100%;
   }
+  
   .cart__table-cell:last-child {
     padding: 0;
   }
+  
   .cart__remove-item {
     padding: 10px 20px;
     background-color: transparent;
