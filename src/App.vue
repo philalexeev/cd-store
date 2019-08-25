@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="app">
+    <!--<div class="app__bg"></div>-->
     <app-header></app-header>
     <router-view></router-view>
   </div>
@@ -15,51 +16,27 @@ export default {
 </script>
 
 <style lang="scss">
-  * {
-    font-family: 'Verdana', sans-serif;
-    font-size: 20px;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-
-  html, body {
+  @import "styles/global";
+  
+  .app {
+    padding-top: 64px;
+    height: 100vh;
     width: 100%;
-    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
   
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-
-    @media screen and (min-width: 768px) {
-      width: 90%;
-    }
-
-    @media screen and (min-width: 1440px) {
-      width: 80%;
-    }
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.1s ease-in;
-    
-    &--orange {
-      color: #fff;
-      background-color: orangered;
-    }
-    
-    &:hover {
-      background-color: darken(orangered, 10%);
-    }
-  }
+  /*.app__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./assets/misc/bg__4k-bw.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    z-index: -1;
+  }*/
 </style>

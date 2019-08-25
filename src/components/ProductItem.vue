@@ -49,6 +49,7 @@ export default {
     align-items: stretch;
     width: 250px;
     margin-top: 20px;
+    background-color: #fff;
   }
   .product__image {
     position: relative;

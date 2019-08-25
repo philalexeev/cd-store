@@ -6,7 +6,7 @@
           <a class="menu__link" href="#">Home</a>
         </router-link>
         <router-link to="/products" tag="li" active-class="menu-item--active" class="menu__item">
-          <a class="menu__link" href="#">Products</a>
+          <a class="menu__link" href="#">Store</a>
         </router-link>
         <router-link to="/cart" tag="li" active-class="menu-item--active" class="menu__item">
           <a class="menu__link" href="#">Cart{{cart.length ? `(${cart.length})` : ''}}</a>
@@ -29,8 +29,14 @@ export default {
 
 <style scoped lang="scss">
   .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 20px 0;
     background-color: #eee;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
+    z-index: 100;
   }
 
   .menu {

@@ -1,5 +1,5 @@
 <template>
-  <div class="component container products">
+  <div class="component container products__page">
     <h1 class="component__heading">Products</h1>
     <div class="products" v-for="band in products" :key="band.name.length*Math.random()*500">
       <ul class="products__list">
@@ -280,6 +280,9 @@ export default {
   }
   .component__heading {
     font-size: 40px;
+  }
+  .products__page {
+    background-color: #aaa;
   }
   .products__list {
     display: flex;
