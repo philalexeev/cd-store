@@ -6,8 +6,9 @@
     <div class="product__description">
       <h2 class="product__album-title">{{ albumTitle }}</h2>
       <h3 class="product__album-year">{{ albumYear }}</h3>
-      <h3 class="product__band-name">{{ bandName }}</h3>
-      <button class="product__btn btn btn--orange" type="button" @click="addToCart">Add to cart</button>
+<!--      <h3 class="product__band-name">{{ bandName }}</h3>-->
+<!--      <button class="product__btn btn btn&#45;&#45;orange" type="button" @click="addToCart">Add to cart</button>-->
+      <p class="product__album-price">{{ productPrice }}$</p>
     </div>
   </div>
 </template>
@@ -56,6 +57,11 @@ export default {
     width: 250px;
     height: 250px;
   }
+  .product__description * {
+    font-family: 'prostoone', sans-serif;
+    font-size: 26px;
+    font-weight: normal;
+  }
   .product__description {
     display: flex;
     flex-direction: column;
@@ -63,15 +69,23 @@ export default {
     flex-grow: 1;
     padding: 10px;
   }
+  .product__album-title {
+    margin-bottom: auto;
+    font-weight: bold;
+  }
   .product__album-year {
-    font-size: 20px;
+    margin-top: 10px;
   }
   .product__band-name {
     color: #777;
-    margin-bottom: auto;
+  }
+  .product__album-price {
+    align-self: stretch;
+    margin-top: 10px;
+    text-align: right;
+    color: #FF5C00;
   }
   .product__btn {
     width: 100%;
-    margin-top: 10px;
   }
 </style>

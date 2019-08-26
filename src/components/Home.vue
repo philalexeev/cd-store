@@ -4,6 +4,7 @@
       <h1 class="home__heading">Vinyl Store</h1>
       <div class="home__subheading-wrapper">
         <h2 class="home__subheading">your home for rare, limited edition and exclusive vinyl</h2>
+        <div class="decoration-line"></div>
       </div>
     </div>
     <router-link to="/products" tag="a" class="btn btn--orange btn--large">Go To Store</router-link>
@@ -31,6 +32,7 @@ export default {
     font-family: 'prostoone', sans-serif;
     font-size: 180px;
     line-height: 1;
+    color: #fff;
     text-transform: uppercase;
     text-shadow: 6px 7px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
@@ -38,28 +40,35 @@ export default {
   
   .home__subheading-wrapper {
     position: relative;
+    display: flex;
     margin-bottom: 100px;
   }
 
   .home__subheading {
-    position: relative;
+    flex-shrink: 0;
     display: inline-block;
-    padding-right: 20px;
+    padding: 0 10px;
+    margin-right: 20px;
     font-family: 'prostoone', sans-serif;
     font-size: 30px;
     background-color: #fff;
     z-index: 2;
   }
   
-  .home__subheading-wrapper::after {
+  .decoration-line {
+    position: relative;
+    flex-grow: 1;
+  }
+  
+  .decoration-line::after {
     content: '';
     position: absolute;
     top: 50%;
-    transform: translateY(-15%);
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
     display: block;
-    width: 100%;
     height: 4px;
     background-color: #FF5C00;
-    z-index: 1;
   }
 </style>
