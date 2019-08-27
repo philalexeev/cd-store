@@ -1,5 +1,5 @@
 <template>
-  <div class="product__wrapper">
+  <router-link to="/store/album" tag="a" class="product__wrapper">
     <div class="product__image">
       <img :src="require(`@/assets/products/${albumCover}`)" alt="">
     </div>
@@ -10,7 +10,7 @@
 <!--      <button class="product__btn btn btn&#45;&#45;orange" type="button" @click="addToCart">Add to cart</button>-->
       <p class="product__album-price">{{ productPrice }}$</p>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>

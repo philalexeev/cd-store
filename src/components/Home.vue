@@ -7,7 +7,7 @@
         <div class="decoration-line"></div>
       </div>
     </div>
-    <router-link to="/products" tag="a" class="btn btn--orange btn--large">Go To Store</router-link>
+    <router-link to="/store" tag="a" class="btn btn--orange btn--large">Go To Store</router-link>
   </div>
 </template>
 
@@ -26,7 +26,7 @@ export default {
     height: 100%;
   }
   .home__heading-wrapper {
-  
+
   }
   .home__heading {
     font-family: 'prostoone', sans-serif;
@@ -37,7 +37,7 @@ export default {
     text-shadow: 6px 7px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
   }
-  
+
   .home__subheading-wrapper {
     position: relative;
     display: flex;
@@ -54,12 +54,12 @@ export default {
     background-color: #fff;
     z-index: 2;
   }
-  
+
   .decoration-line {
     position: relative;
     flex-grow: 1;
   }
-  
+
   .decoration-line::after {
     content: '';
     position: absolute;

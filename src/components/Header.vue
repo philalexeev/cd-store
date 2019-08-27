@@ -5,7 +5,7 @@
         <router-link to="/" tag="li" active-class="menu-item--active" class="menu__item" exact>
           <a class="menu__link" href="#">Home</a>
         </router-link>
-        <router-link to="/products" tag="li" active-class="menu-item--active" class="menu__item">
+        <router-link to="/store" tag="li" active-class="menu-item--active" class="menu__item">
           <a class="menu__link" href="#">Store</a>
         </router-link>
         <router-link to="/cart" tag="li" active-class="menu-item--active" class="menu__item">
