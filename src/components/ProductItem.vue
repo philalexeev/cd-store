@@ -51,6 +51,9 @@ export default {
     width: 250px;
     margin-top: 20px;
     background-color: #fff;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
   }
   .product__image {
     position: relative;

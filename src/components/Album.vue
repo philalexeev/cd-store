@@ -28,7 +28,7 @@
   .album {
     display: flex;
     align-items: flex-start;
-    padding-top: 50px;
+    padding: 50px 0 50px;
   }
 
   .album__image-wrapper {
@@ -62,6 +62,7 @@
   .album__review {
     margin-top: 50px;
     font-family: 'prostoone', sans-serif;
+    line-height: 1.5;
     text-align: justify;
   }
 

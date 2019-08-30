@@ -32,7 +32,7 @@ export default {
     font-family: 'prostoone', sans-serif;
     font-size: 180px;
     line-height: 1;
-    color: #fff;
+    color: #333;
     text-transform: uppercase;
     text-shadow: 6px 7px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
@@ -51,7 +51,7 @@ export default {
     margin-right: 20px;
     font-family: 'prostoone', sans-serif;
     font-size: 30px;
-    background-color: #fff;
+    color: #333;
     z-index: 2;
   }
 
