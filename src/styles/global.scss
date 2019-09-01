@@ -1,16 +1,25 @@
 $orangered: #FF5C00;
 
 @font-face {
-  font-family: 'prostoone';
-  src: url('../src/assets/fonts/prostoone-regular.woff2') format('woff2'),
-      url('../src/assets/fonts/prostoone-regular.woff') format('woff');
+  font-family: 'Play';
+  src: url('../src/assets/fonts/Play-Bold.woff2') format('woff2'),
+      url('../src/assets/fonts/Play-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Play';
+  src: url('../src/assets/fonts/Play-Regular.woff2') format('woff2'),
+      url('../src/assets/fonts/Play-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 *, *::before, *::after {
-  font-family: 'Tahoma', sans-serif;
+  font-family: 'Play', sans-serif;
   font-size: 20px;
   box-sizing: border-box;
   padding: 0;

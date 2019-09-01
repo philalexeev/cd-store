@@ -6,11 +6,12 @@ import Store from './components/Store'
 
 export const routes = [
   { path: '/', component: Home },
-  { path: '/store', component: Store,
+  { path: '/store',
+    component: Store,
     children: [
       { path: '', component: Products },
-      { path: ':id', component: Album }
+      { path: 'albums', component: Album, name: 'album', props: true }
     ]
   },
   { path: '/cart', component: Cart }
-];
+]

@@ -1,12 +1,19 @@
 <template>
-  <router-link to="/store/album" tag="a" class="product__wrapper">
+  <router-link class="product__wrapper" :to="{ name: 'album', params: {
+    albumTitle: albumTitle,
+    bandName: bandName,
+    albumPrice: productPrice,
+    wikiPageId: wikiPageId,
+    albumYear: albumYear,
+    albumCover: `${albumCover ? albumCover : 'logo.png'}`
+    }}">
     <div class="product__image">
       <img :src="require(`@/assets/products/${albumCover}`)" alt="">
     </div>
     <div class="product__description">
       <h2 class="product__album-title">{{ albumTitle }}</h2>
+      <h3 class="product__band-name">{{ bandName }}</h3>
       <h3 class="product__album-year">{{ albumYear }}</h3>
-<!--      <h3 class="product__band-name">{{ bandName }}</h3>-->
 <!--      <button class="product__btn btn btn&#45;&#45;orange" type="button" @click="addToCart">Add to cart</button>-->
       <p class="product__album-price">{{ productPrice }}$</p>
     </div>
@@ -21,6 +28,7 @@ export default {
     bandName: String,
     albumYear: [String, Number],
     productPrice: [String, Number],
+    wikiPageId: Number,
     albumCover: {
       default: 'logo.png'
     }
@@ -28,16 +36,6 @@ export default {
   data() {
     return {
 
-    }
-  },
-  methods: {
-    addToCart() {
-      return this.$store.commit('addProduct', {
-        bandName: this.bandName,
-        albumYear: this.albumYear,
-        albumTitle: this.albumTitle,
-        price: this.productPrice
-      })
     }
   }
 }
@@ -61,8 +59,7 @@ export default {
     height: 250px;
   }
   .product__description * {
-    font-family: 'prostoone', sans-serif;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: normal;
   }
   .product__description {
@@ -77,9 +74,11 @@ export default {
     font-weight: bold;
   }
   .product__album-year {
+    font-weight: bold;
     margin-top: 10px;
   }
   .product__band-name {
+    margin-top: 10px;
     color: #777;
   }
   .product__album-price {

@@ -1,4 +1,11 @@
-# vue
+# vue || cd-store
+
+## TODO
+
+- stylize cart
+- add contacts page
+- add preloader in album page in description section
+- add sort select in store/productsList page
 
 ## Project setup
 ```
