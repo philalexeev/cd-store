@@ -1,18 +1,18 @@
 <template>
   <div class="component container products__page">
-    <div class="products" v-for="band in products" :key="band.name.length*Math.random()*500">
+    <div class="products">
       <ul class="products__list">
         <li
           class="products__list-item"
-          v-for="productItem in band.albums"
-          :key="productItem.title.length*Math.random()*500">
+          v-for="album in products"
+          :key="album.wikiPageId">
           <app-product-item
-            :albumTitle="productItem.title"
-            :bandName="band.name"
-            :albumYear="productItem.year"
-            :productPrice="productItem.price"
-            :wikiPageId="productItem.wikiPageId"
-            :albumCover="`${productItem.coverUrl ? productItem.coverUrl : 'logo.png'}`"
+            :albumTitle="album.title"
+            :bandName="album.band"
+            :albumYear="album.year"
+            :productPrice="album.price"
+            :wikiPageId="album.wikiPageId"
+            :albumCover="`${album.coverUrl ? album.coverUrl : 'logo.png'}`"
           ></app-product-item>
         </li>
       </ul>
@@ -37,13 +37,9 @@ export default {
 }
 </script>
 
-<style>
-  .component__heading {
-    font-size: 40px;
-  }
+<style lang="scss">
   .products__list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
     list-style: none;
@@ -51,5 +47,42 @@ export default {
   .products__list-item {
     display: flex;
     align-items: stretch;
+    margin-right: 20px;
+
+    @media screen and (min-width: 590px) {
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (min-width: 870px) {
+      &:nth-child(2n) {
+        margin-right: 20px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      &:nth-child(3n) {
+        margin-right: 20px;
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (min-width: 1500px) {
+      &:nth-child(4n) {
+        margin-right: 20px;
+      }
+
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+    }
   }
 </style>

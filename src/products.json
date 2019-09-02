@@ -1,278 +1,300 @@
 {
   "products": [
     {
-      "name": "The Beatles",
-      "albums": [
-        {
-          "title": "Please Please Me",
-          "year": 1963,
-          "coverUrl": "the beatles/ppm.jpg",
-          "price": 50,
-          "wikiPageId": 65835
-        },
-        {
-          "title": "With The Beatles",
-          "year": 1963,
-          "coverUrl": "the beatles/wtb.jpg",
-          "price": 50,
-          "wikiPageId": 37530567
-        },
-        {
-          "title": "A Hard Day’s Night",
-          "year": 1964,
-          "coverUrl": "the beatles/hdn.jpg",
-          "price": 50,
-          "wikiPageId": 11106645
-        },
-        {
-          "title": "Beatles For Sale",
-          "year": 1964,
-          "coverUrl": "the beatles/bfs.jpg",
-          "price": 50,
-          "wikiPageId": 163968
-        },
-        {
-          "title": "Help!",
-          "year": 1965,
-          "coverUrl": "the beatles/help.jpg",
-          "price": 50,
-          "wikiPageId": 74934
-        },
-        {
-          "title": "Rubber Soul",
-          "year": 1965,
-          "coverUrl": "the beatles/rs.jpg",
-          "price": 50,
-          "wikiPageId": 74961
-        },
-        {
-          "title": "Revolver",
-          "year": 1966,
-          "coverUrl": "the beatles/revolver.jpg",
-          "price": 50,
-          "wikiPageId": 74983
-        },
-        {
-          "title": "Sgt. Pepper’s Lonely Hearts Club Band",
-          "year": 1967,
-          "coverUrl": "the beatles/sp.jpg",
-          "price": 50,
-          "wikiPageId": 65450
-        },
-        {
-          "title": "Magical Mystery Tour",
-          "year": 1967,
-          "coverUrl": "the beatles/mmt.jpg",
-          "price": 50,
-          "wikiPageId": 142509
-        },
-        {
-          "title": "The Beatles",
-          "year": 1968,
-          "coverUrl": "the beatles/wa.jpg",
-          "price": 50,
-          "wikiPageId": 75350
-        },
-        {
-          "title": "Yellow Submarine",
-          "year": 1969,
-          "coverUrl": "the beatles/ys.jpg",
-          "price": 50,
-          "wikiPageId": 142531
-        },
-        {
-          "title": "Abbey Road",
-          "year": 1969,
-          "coverUrl": "the beatles/ar.jpg",
-          "price": 50,
-          "wikiPageId": 926304
-        },
-        {
-          "title": "Let It Be",
-          "year": 1970,
-          "coverUrl": "the beatles/lib.jpg",
-          "price": 50,
-          "wikiPageId": 3978944
-        }
-      ]
+      "band": "The Beatles",
+      "title": "Please Please Me",
+      "year": 1963,
+      "coverUrl": "the beatles/ppm.jpg",
+      "price": 50,
+      "wikiPageId": 65835
     },
     {
-      "name": "Led Zeppelin",
-      "albums": [
-        {
-          "title": "Led Zeppelin",
-          "year": 1969,
-          "coverUrl": "led zeppelin/lz.jpg",
-          "price": 50,
-          "wikiPageId": 44640
-        },
-        {
-          "title": "Led Zeppelin II",
-          "year": 1969,
-          "coverUrl": "led zeppelin/lz2.jpg",
-          "price": 50,
-          "wikiPageId": 50239
-        },
-        {
-          "title": "Led Zeppelin III",
-          "year": 1970,
-          "coverUrl": "led zeppelin/lz3.jpg",
-          "price": 50,
-          "wikiPageId": 50241
-        },
-        {
-          "title": "Led Zeppelin IV",
-          "year": 1971,
-          "coverUrl": "led zeppelin/lz4.jpg",
-          "price": 50,
-          "wikiPageId": 50242
-        },
-        {
-          "title": "Houses of the Holy",
-          "year": 1973,
-          "coverUrl": "led zeppelin/hoth.jpg",
-          "price": 50,
-          "wikiPageId": 50243
-        },
-        {
-          "title": "Physical Graffiti",
-          "year": 1975,
-          "coverUrl": "led zeppelin/pg.jpg",
-          "price": 50,
-          "wikiPageId": 50246
-        },
-        {
-          "title": "Presence",
-          "year": 1976,
-          "coverUrl": "led zeppelin/p.jpg",
-          "price": 50,
-          "wikiPageId": 50247
-        },
-        {
-          "title": "In Through the Out Door",
-          "year": 1979,
-          "coverUrl": "led zeppelin/ittod.jpg",
-          "price": 50,
-          "wikiPageId": 23536981
-        },
-        {
-          "title": "Coda",
-          "year": 1982,
-          "coverUrl": "led zeppelin/c.jpg",
-          "price": 50,
-          "wikiPageId": 50458
-        }
-      ]
+      "band": "The Beatles",
+      "title": "With The Beatles",
+      "year": 1963,
+      "coverUrl": "the beatles/wtb.jpg",
+      "price": 50,
+      "wikiPageId": 37530567
     },
     {
-      "name": "Pink Floyd",
-      "albums": [
-        {
-          "title": "The Piper at the Gates of Dawn",
-          "year": 1967,
-          "coverUrl": "pink floyd/tpatgod.jpg",
-          "price": 50,
-          "wikiPageId": 203501
-        },
-        {
-          "title": "A Saucerful of Secrets",
-          "year": 1968,
-          "coverUrl": "pink floyd/asos.jpg",
-          "price": 50,
-          "wikiPageId": 360251
-        },
-        {
-          "title": "Music from the Film More",
-          "year": 1969,
-          "coverUrl": "pink floyd/more.jpg",
-          "price": 50,
-          "wikiPageId": 17845354
-        },
-        {
-          "title": "Ummagumma",
-          "year": 1969,
-          "coverUrl": "pink floyd/u.jpg",
-          "price": 50,
-          "wikiPageId": 360268
-        },
-        {
-          "title": "Atom Heart Mother",
-          "year": 1970,
-          "coverUrl": "pink floyd/ahm.jpg",
-          "price": 50,
-          "wikiPageId": 271068
-        },
-        {
-          "title": "Meddle",
-          "year": 1971,
-          "coverUrl": "pink floyd/meddle.jpg",
-          "price": 50,
-          "wikiPageId": 303876
-        },
-        {
-          "title": "Obscured by Clouds",
-          "year": 1972,
-          "coverUrl": "pink floyd/obc.jpg",
-          "price": 50,
-          "wikiPageId": 360275
-        },
-        {
-          "title": "The Dark Side of the Moon",
-          "year": 1973,
-          "coverUrl": "pink floyd/tdsotm.jpg",
-          "price": 50,
-          "wikiPageId": 42634
-        },
-        {
-          "title": "Wish You Were Here",
-          "year": 1975,
-          "coverUrl": "pink floyd/wywh.jpg",
-          "price": 50,
-          "wikiPageId": 1954022
-        },
-        {
-          "title": "Animals",
-          "year": 1977,
-          "coverUrl": "pink floyd/animals.jpg",
-          "price": 50,
-          "wikiPageId": 155972
-        },
-        {
-          "title": "The Wall",
-          "year": 1979,
-          "coverUrl": "pink floyd/tw.jpg",
-          "price": 50,
-          "wikiPageId": 149116
-        },
-        {
-          "title": "The Final Cut",
-          "year": 1983,
-          "coverUrl": "pink floyd/tfc.jpg",
-          "price": 50,
-          "wikiPageId": 4089143
-        },
-        {
-          "title": "A Momentary Lapse of Reason",
-          "year": 1987,
-          "coverUrl": "pink floyd/amlor.jpg",
-          "price": 50,
-          "wikiPageId": 327421
-        },
-        {
-          "title": "The Division Bell",
-          "year": 1994,
-          "coverUrl": "pink floyd/tdb.jpg",
-          "price": 50,
-          "wikiPageId": 357820
-        },
-        {
-          "title": "The Endless River",
-          "year": 2014,
-          "coverUrl": "pink floyd/ter.jpg",
-          "price": 50,
-          "wikiPageId": 43226553
-        }
-      ]
+      "band": "The Beatles",
+      "title": "A Hard Day’s Night",
+      "year": 1964,
+      "coverUrl": "the beatles/hdn.jpg",
+      "price": 50,
+      "wikiPageId": 74860
+    },
+    {
+      "band": "The Beatles",
+      "title": "Beatles For Sale",
+      "year": 1964,
+      "coverUrl": "the beatles/bfs.jpg",
+      "price": 50,
+      "wikiPageId": 163968
+    },
+    {
+      "band": "The Beatles",
+      "title": "Help!",
+      "year": 1965,
+      "coverUrl": "the beatles/help.jpg",
+      "price": 50,
+      "wikiPageId": 74934
+    },
+    {
+      "band": "The Beatles",
+      "title": "Rubber Soul",
+      "year": 1965,
+      "coverUrl": "the beatles/rs.jpg",
+      "price": 50,
+      "wikiPageId": 74961
+    },
+    {
+      "band": "The Beatles",
+      "title": "Revolver",
+      "year": 1966,
+      "coverUrl": "the beatles/revolver.jpg",
+      "price": 50,
+      "wikiPageId": 74983
+    },
+    {
+      "band": "The Beatles",
+      "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+      "year": 1967,
+      "coverUrl": "the beatles/sp.jpg",
+      "price": 50,
+      "wikiPageId": 65450
+    },
+    {
+      "band": "The Beatles",
+      "title": "Magical Mystery Tour",
+      "year": 1967,
+      "coverUrl": "the beatles/mmt.jpg",
+      "price": 50,
+      "wikiPageId": 142509
+    },
+    {
+      "band": "The Beatles",
+      "title": "The Beatles",
+      "year": 1968,
+      "coverUrl": "the beatles/wa.jpg",
+      "price": 50,
+      "wikiPageId": 75350
+    },
+    {
+      "band": "The Beatles",
+      "title": "Yellow Submarine",
+      "year": 1969,
+      "coverUrl": "the beatles/ys.jpg",
+      "price": 50,
+      "wikiPageId": 142531
+    },
+    {
+      "band": "The Beatles",
+      "title": "Abbey Road",
+      "year": 1969,
+      "coverUrl": "the beatles/ar.jpg",
+      "price": 50,
+      "wikiPageId": 926304
+    },
+    {
+      "band": "The Beatles",
+      "title": "Let It Be",
+      "year": 1970,
+      "coverUrl": "the beatles/lib.jpg",
+      "price": 50,
+      "wikiPageId": 3978944
+    },
+    {
+      "band": "Led Zeppelin",
+      "title": "Led Zeppelin",
+      "year": 1969,
+      "coverUrl": "led zeppelin/lz.jpg",
+      "price": 50,
+      "wikiPageId": 44640
+    },
+    {
+      "band": "Led Zeppelin",
+      "title": "Led Zeppelin II",
+      "year": 1969,
+      "coverUrl": "led zeppelin/lz2.jpg",
+      "price": 50,
+      "wikiPageId": 50239
+    },
+    {
+      "band": "Led Zeppelin",
+      "title": "Led Zeppelin III",
+      "year": 1970,
+      "coverUrl": "led zeppelin/lz3.jpg",
+      "price": 50,
+      "wikiPageId": 50241
+    },
+    {
+      "band": "Led Zeppelin",
+      "title": "Led Zeppelin IV",
+      "year": 1971,
+      "coverUrl": "led zeppelin/lz4.jpg",
+      "price": 50,
+      "wikiPageId": 50242
+    },
+    {
+      "band": "Led Zeppelin",
+      "title": "Houses of the Holy",
+      "year": 1973,
+      "coverUrl": "led zeppelin/hoth.jpg",
+      "price": 50,
+      "wikiPageId": 50243
+    },
+    {
+      "band": "Led Zeppelin",
+      "title": "Physical Graffiti",
+      "year": 1975,
+      "coverUrl": "led zeppelin/pg.jpg",
+      "price": 50,
+      "wikiPageId": 50246
+    },
+    {
+      "band": "Led Zeppelin",
+      "title": "Presence",
+      "year": 1976,
+      "coverUrl": "led zeppelin/p.jpg",
+      "price": 50,
+      "wikiPageId": 50247
+    },
+    {
+      "band": "Led Zeppelin",
+      "title": "In Through the Out Door",
+      "year": 1979,
+      "coverUrl": "led zeppelin/ittod.jpg",
+      "price": 50,
+      "wikiPageId": 23536981
+    },
+    {
+      "band": "Led Zeppelin",
+      "title": "Coda",
+      "year": 1982,
+      "coverUrl": "led zeppelin/c.jpg",
+      "price": 50,
+      "wikiPageId": 50458
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "The Piper at the Gates of Dawn",
+      "year": 1967,
+      "coverUrl": "pink floyd/tpatgod.jpg",
+      "price": 50,
+      "wikiPageId": 203501
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "A Saucerful of Secrets",
+      "year": 1968,
+      "coverUrl": "pink floyd/asos.jpg",
+      "price": 50,
+      "wikiPageId": 360251
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "Music from the Film More",
+      "year": 1969,
+      "coverUrl": "pink floyd/more.jpg",
+      "price": 50,
+      "wikiPageId": 17845354
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "Ummagumma",
+      "year": 1969,
+      "coverUrl": "pink floyd/u.jpg",
+      "price": 50,
+      "wikiPageId": 360268
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "Atom Heart Mother",
+      "year": 1970,
+      "coverUrl": "pink floyd/ahm.jpg",
+      "price": 50,
+      "wikiPageId": 271068
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "Meddle",
+      "year": 1971,
+      "coverUrl": "pink floyd/meddle.jpg",
+      "price": 50,
+      "wikiPageId": 303876
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "Obscured by Clouds",
+      "year": 1972,
+      "coverUrl": "pink floyd/obc.jpg",
+      "price": 50,
+      "wikiPageId": 360275
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "The Dark Side of the Moon",
+      "year": 1973,
+      "coverUrl": "pink floyd/tdsotm.jpg",
+      "price": 50,
+      "wikiPageId": 42634
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "Wish You Were Here",
+      "year": 1975,
+      "coverUrl": "pink floyd/wywh.jpg",
+      "price": 50,
+      "wikiPageId": 1954022
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "Animals",
+      "year": 1977,
+      "coverUrl": "pink floyd/animals.jpg",
+      "price": 50,
+      "wikiPageId": 155972
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "The Wall",
+      "year": 1979,
+      "coverUrl": "pink floyd/tw.jpg",
+      "price": 50,
+      "wikiPageId": 149116
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "The Final Cut",
+      "year": 1983,
+      "coverUrl": "pink floyd/tfc.jpg",
+      "price": 50,
+      "wikiPageId": 4089143
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "A Momentary Lapse of Reason",
+      "year": 1987,
+      "coverUrl": "pink floyd/amlor.jpg",
+      "price": 50,
+      "wikiPageId": 327421
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "The Division Bell",
+      "year": 1994,
+      "coverUrl": "pink floyd/tdb.jpg",
+      "price": 50,
+      "wikiPageId": 357820
+    },
+    {
+      "band": "Pink Floyd",
+      "title": "The Endless River",
+      "year": 2014,
+      "coverUrl": "pink floyd/ter.jpg",
+      "price": 50,
+      "wikiPageId": 43226553
     }
   ]
 }

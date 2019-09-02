@@ -2,7 +2,10 @@
   <div class="container album">
     <div class="album__image-wrapper">
       <img class="album__image" :src="require(`@/assets/products/${albumCover}`)" alt="111">
-      <button class="btn btn--orange btn--large" type="button" @click="addToCart">Add to Cart</button>
+      <button
+        :class="['btn', 'btn--large', addedToCart ? 'btn--done' : 'btn--orange']"
+        type="button"
+        @click="addToCart">{{ `${addedToCart ? 'Added to Cart' : 'Add to Cart'}` }}</button>
     </div>
     <div class="album__description">
       <div class="album__heading-wrapper">
@@ -34,6 +37,17 @@ export default {
       summaryDescription: ''
     }
   },
+  computed: {
+    addedToCart() {
+      let cart = this.$store.state.cart;
+      for (let i = 0; i < cart.length; i++) {
+        if ( this.wikiPageId === cart[i].albumId ) {
+          return true
+        }
+      }
+      return false
+    }
+  },
   methods: {
     getDescription() {
       wikijs().findById(this.wikiPageId)
@@ -47,7 +61,8 @@ export default {
         bandName: this.bandName,
         albumYear: this.albumYear,
         albumTitle: this.albumTitle,
-        price: this.albumPrice
+        price: this.albumPrice,
+        albumId: this.wikiPageId
       })
     }
   },

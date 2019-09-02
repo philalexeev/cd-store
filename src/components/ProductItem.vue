@@ -84,6 +84,8 @@ export default {
   .product__album-price {
     align-self: stretch;
     margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
     text-align: right;
     color: #FF5C00;
   }
