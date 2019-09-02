@@ -29,7 +29,6 @@ export default {
 
   }
   .home__heading {
-    font-family: 'prostoone', sans-serif;
     font-size: 180px;
     line-height: 1;
     color: #333;
@@ -49,7 +48,6 @@ export default {
     display: inline-block;
     padding: 0 10px;
     margin-right: 20px;
-    font-family: 'prostoone', sans-serif;
     font-size: 30px;
     color: #333;
     z-index: 2;
