@@ -41,15 +41,23 @@ export default {
   .products__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
+    padding-bottom: 40px;
     list-style: none;
+
+    @media screen and (min-width: 580px) {
+      justify-content: flex-start;
+    }
   }
   .products__list-item {
     display: flex;
     align-items: stretch;
-    margin-right: 20px;
+    margin-right: 0;
 
-    @media screen and (min-width: 590px) {
+    @media screen and (min-width: 580px) {
+      margin-right: 20px;
+
       &:nth-child(2n) {
         margin-right: 0;
       }

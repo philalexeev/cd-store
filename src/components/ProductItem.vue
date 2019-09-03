@@ -46,17 +46,21 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    width: 250px;
+    width: 280px;
     margin-top: 20px;
     background-color: #fff;
     text-decoration: none;
     color: #333;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+
+    @media screen and (min-width: 580px) {
+      width: 250px;
+    }
   }
   .product__image {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: auto;
   }
   .product__description * {
     font-size: 20px;

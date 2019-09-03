@@ -17,13 +17,13 @@ export default {
 
 <style lang="scss">
   @import "styles/global";
-  
+
   .app {
     padding-top: 64px;
     height: 100vh;
     width: 100%;
   }
-  
+
   .app__bg {
     position: fixed;
     top: 0;
