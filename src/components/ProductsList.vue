@@ -1,6 +1,14 @@
 <template>
   <div class="component container products__page">
     <div class="products">
+      <select class="products__sorting-select" name="sorting" id="sorting">
+        <option value="byDefault">Default</option>
+        <option value="byBandName">Band Name</option>
+        <option value="byAlbumTitle">Album Title</option>
+        <option value="byPrice(highToLow)">Price (high to low)</option>
+        <option value="byPrice(lowToHigh)">Price (low to high)</option>
+        <option value="byYear">Year</option>
+      </select>
       <ul class="products__list">
         <li
           class="products__list-item"
@@ -38,12 +46,26 @@ export default {
 </script>
 
 <style lang="scss">
+  .products {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
+
+  .products__sorting-select {
+    align-self: flex-end;
+    font-size: 20px;
+    width: 300px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
   .products__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    padding-bottom: 40px;
     list-style: none;
 
     @media screen and (min-width: 580px) {

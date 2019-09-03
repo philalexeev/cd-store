@@ -2,10 +2,11 @@
 
 ## TODO
 
-- stylize cart
-- add contacts page
-- add preloader in album page in description section
-- add sort select in store/productsList page
+-[ ] stylize cart ( add btns for "add to cart"... )
+-[ ] add contacts page
+-[x] add preloader in album page in description section
+-[ ] add sort select in store/productsList page
+-[x] add smooth transition among components
 
 ## Project setup
 ```

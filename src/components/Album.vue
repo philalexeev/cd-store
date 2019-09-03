@@ -50,9 +50,12 @@ export default {
   },
   methods: {
     getDescription() {
+      let review = document.querySelector('.album__review');
+      const cssStyles = 'height: auto;background-image: none;';
       wikijs().findById(this.wikiPageId)
         .then(page => page.summary())
         .then(response => {
+          review.style.cssText = cssStyles;
           this.summaryDescription = response
         })
     },
@@ -88,6 +91,9 @@ export default {
   }
 
   .album__image {
+    width: 500px;
+    height: 500px;
+    background-color: #eee;
     margin-bottom: 50px;
   }
 
@@ -107,9 +113,14 @@ export default {
   }
 
   .album__review {
+    height: 50px;
     margin-top: 50px;
     line-height: 1.5;
     text-align: justify;
+    background-image: url('../assets/misc/preloader.svg');
+    background-repeat: no-repeat;
+    background-size: 160px 30px;
+    background-position: center top;
   }
 
   .btn--large {

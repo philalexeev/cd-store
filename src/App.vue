@@ -2,7 +2,9 @@
   <div class="app">
     <div class="app__bg"></div>
     <app-header></app-header>
-    <router-view></router-view>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -17,6 +19,7 @@ export default {
 
 <style lang="scss">
   @import "styles/global";
+  @import "styles/transitions";
 
   .app {
     padding-top: 64px;
