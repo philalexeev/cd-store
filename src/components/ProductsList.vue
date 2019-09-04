@@ -1,7 +1,7 @@
 <template>
   <div class="component container products__page">
     <div class="products">
-      <select class="products__sorting-select" name="sorting" id="sorting">
+      <select class="products__sorting-select" name="sorting" id="sorting" v-model="sortType">
         <option value="byDefault">Default</option>
         <option value="byBandName">Band Name</option>
         <option value="byAlbumTitle">Album Title</option>
@@ -12,7 +12,7 @@
       <ul class="products__list">
         <li
           class="products__list-item"
-          v-for="album in products"
+          v-for="album in sortedProducts"
           :key="album.wikiPageId">
           <app-product-item
             :albumTitle="album.title"
@@ -36,11 +36,54 @@ export default {
   name: 'Products',
   data () {
     return {
-      products: jsonList.products
+      sortType: 'byDefault'
+    }
+  },
+  computed: {
+    products() {
+      return jsonList.products.forEach( function(elem, i) {
+        elem.index = i;
+      })
+    },
+    sortedProducts () {
+      switch (this.sortType) {
+        case 'byDefault':
+          return this.products.sort(this.sortByDefault);
+        case 'byBandName':
+          return this.products.sort(this.sortByBandName);
+        case 'byAlbumTitle':
+          return this.products.sort(this.sortByAlbumTitle);
+        case 'byPrice(highToLow)':
+          return this.products.sort(this.sortByPriceToLow);
+        case 'byPrice(lowToHigh)':
+          return this.products.sort(this.sortByPriceToHigh);
+        case 'byYear':
+          return this.products.sort(this.sortByYear);
+      }
     }
   },
   components: {
     'app-product-item': ProductItem
+  },
+  methods: {
+    sortByDefault(d1, d2) {
+      return (d1.index.toLowerCase() > d2.index.toLowerCase()) ? 1 : -1;
+    },
+    sortByBandName(d1, d2) {
+      return (d1.band.toLowerCase() > d2.band.toLowerCase()) ? 1 : -1;
+    },
+    sortByAlbumTitle(d1, d2) {
+      return (d1.title.toLowerCase() > d2.title.toLowerCase()) ? 1 : -1;
+    },
+    sortByPriceToHigh(d1, d2) {
+      return (d1.price > d2.price) ? 1 : -1
+    },
+    sortByPriceToLow(d1, d2) {
+      return (d1.price > d2.price) ? -1 : 1
+    },
+    sortByYear(d1, d2) {
+      return (d1.year > d2.year) ? -1 : 1
+    }
   }
 }
 </script>

@@ -21,7 +21,7 @@
       "title": "A Hard Day’s Night",
       "year": 1964,
       "coverUrl": "the beatles/hdn.jpg",
-      "price": 50,
+      "price": 62,
       "wikiPageId": 74860
     },
     {
@@ -29,7 +29,7 @@
       "title": "Beatles For Sale",
       "year": 1964,
       "coverUrl": "the beatles/bfs.jpg",
-      "price": 50,
+      "price": 52,
       "wikiPageId": 163968
     },
     {
@@ -37,7 +37,7 @@
       "title": "Help!",
       "year": 1965,
       "coverUrl": "the beatles/help.jpg",
-      "price": 50,
+      "price": 53,
       "wikiPageId": 74934
     },
     {
@@ -45,7 +45,7 @@
       "title": "Rubber Soul",
       "year": 1965,
       "coverUrl": "the beatles/rs.jpg",
-      "price": 50,
+      "price": 53,
       "wikiPageId": 74961
     },
     {
@@ -53,7 +53,7 @@
       "title": "Revolver",
       "year": 1966,
       "coverUrl": "the beatles/revolver.jpg",
-      "price": 50,
+      "price": 55,
       "wikiPageId": 74983
     },
     {
@@ -61,7 +61,7 @@
       "title": "Sgt. Pepper’s Lonely Hearts Club Band",
       "year": 1967,
       "coverUrl": "the beatles/sp.jpg",
-      "price": 50,
+      "price": 56,
       "wikiPageId": 65450
     },
     {
@@ -69,7 +69,7 @@
       "title": "Magical Mystery Tour",
       "year": 1967,
       "coverUrl": "the beatles/mmt.jpg",
-      "price": 50,
+      "price": 57,
       "wikiPageId": 142509
     },
     {
@@ -77,7 +77,7 @@
       "title": "The Beatles",
       "year": 1968,
       "coverUrl": "the beatles/wa.jpg",
-      "price": 50,
+      "price": 67,
       "wikiPageId": 75350
     },
     {
@@ -85,7 +85,7 @@
       "title": "Yellow Submarine",
       "year": 1969,
       "coverUrl": "the beatles/ys.jpg",
-      "price": 50,
+      "price": 58,
       "wikiPageId": 142531
     },
     {
@@ -93,7 +93,7 @@
       "title": "Abbey Road",
       "year": 1969,
       "coverUrl": "the beatles/ar.jpg",
-      "price": 50,
+      "price": 58,
       "wikiPageId": 926304
     },
     {
@@ -101,7 +101,7 @@
       "title": "Let It Be",
       "year": 1970,
       "coverUrl": "the beatles/lib.jpg",
-      "price": 50,
+      "price": 69,
       "wikiPageId": 3978944
     },
     {
@@ -109,7 +109,7 @@
       "title": "Led Zeppelin",
       "year": 1969,
       "coverUrl": "led zeppelin/lz.jpg",
-      "price": 50,
+      "price": 59,
       "wikiPageId": 44640
     },
     {
@@ -117,7 +117,7 @@
       "title": "Led Zeppelin II",
       "year": 1969,
       "coverUrl": "led zeppelin/lz2.jpg",
-      "price": 50,
+      "price": 59,
       "wikiPageId": 50239
     },
     {
@@ -125,7 +125,7 @@
       "title": "Led Zeppelin III",
       "year": 1970,
       "coverUrl": "led zeppelin/lz3.jpg",
-      "price": 50,
+      "price": 60,
       "wikiPageId": 50241
     },
     {
@@ -133,7 +133,7 @@
       "title": "Led Zeppelin IV",
       "year": 1971,
       "coverUrl": "led zeppelin/lz4.jpg",
-      "price": 50,
+      "price": 61,
       "wikiPageId": 50242
     },
     {
@@ -141,7 +141,7 @@
       "title": "Houses of the Holy",
       "year": 1973,
       "coverUrl": "led zeppelin/hoth.jpg",
-      "price": 50,
+      "price": 61,
       "wikiPageId": 50243
     },
     {
@@ -149,7 +149,7 @@
       "title": "Physical Graffiti",
       "year": 1975,
       "coverUrl": "led zeppelin/pg.jpg",
-      "price": 50,
+      "price": 48,
       "wikiPageId": 50246
     },
     {
@@ -157,7 +157,7 @@
       "title": "Presence",
       "year": 1976,
       "coverUrl": "led zeppelin/p.jpg",
-      "price": 50,
+      "price": 49,
       "wikiPageId": 50247
     },
     {
@@ -173,7 +173,7 @@
       "title": "Coda",
       "year": 1982,
       "coverUrl": "led zeppelin/c.jpg",
-      "price": 50,
+      "price": 66,
       "wikiPageId": 50458
     },
     {
@@ -181,7 +181,7 @@
       "title": "The Piper at the Gates of Dawn",
       "year": 1967,
       "coverUrl": "pink floyd/tpatgod.jpg",
-      "price": 50,
+      "price": 70,
       "wikiPageId": 203501
     },
     {
@@ -189,7 +189,7 @@
       "title": "A Saucerful of Secrets",
       "year": 1968,
       "coverUrl": "pink floyd/asos.jpg",
-      "price": 50,
+      "price": 42,
       "wikiPageId": 360251
     },
     {
@@ -197,7 +197,7 @@
       "title": "Music from the Film More",
       "year": 1969,
       "coverUrl": "pink floyd/more.jpg",
-      "price": 50,
+      "price": 44,
       "wikiPageId": 17845354
     },
     {
@@ -205,7 +205,7 @@
       "title": "Ummagumma",
       "year": 1969,
       "coverUrl": "pink floyd/u.jpg",
-      "price": 50,
+      "price": 45,
       "wikiPageId": 360268
     },
     {
@@ -213,7 +213,7 @@
       "title": "Atom Heart Mother",
       "year": 1970,
       "coverUrl": "pink floyd/ahm.jpg",
-      "price": 50,
+      "price": 40,
       "wikiPageId": 271068
     },
     {
@@ -221,7 +221,7 @@
       "title": "Meddle",
       "year": 1971,
       "coverUrl": "pink floyd/meddle.jpg",
-      "price": 50,
+      "price": 60,
       "wikiPageId": 303876
     },
     {
@@ -229,7 +229,7 @@
       "title": "Obscured by Clouds",
       "year": 1972,
       "coverUrl": "pink floyd/obc.jpg",
-      "price": 50,
+      "price": 57,
       "wikiPageId": 360275
     },
     {
@@ -237,7 +237,7 @@
       "title": "The Dark Side of the Moon",
       "year": 1973,
       "coverUrl": "pink floyd/tdsotm.jpg",
-      "price": 50,
+      "price": 74,
       "wikiPageId": 42634
     },
     {
@@ -245,7 +245,7 @@
       "title": "Wish You Were Here",
       "year": 1975,
       "coverUrl": "pink floyd/wywh.jpg",
-      "price": 50,
+      "price": 47,
       "wikiPageId": 1954022
     },
     {
@@ -253,7 +253,7 @@
       "title": "Animals",
       "year": 1977,
       "coverUrl": "pink floyd/animals.jpg",
-      "price": 50,
+      "price": 53,
       "wikiPageId": 155972
     },
     {
@@ -261,7 +261,7 @@
       "title": "The Wall",
       "year": 1979,
       "coverUrl": "pink floyd/tw.jpg",
-      "price": 50,
+      "price": 48,
       "wikiPageId": 149116
     },
     {
@@ -269,7 +269,7 @@
       "title": "The Final Cut",
       "year": 1983,
       "coverUrl": "pink floyd/tfc.jpg",
-      "price": 50,
+      "price": 48,
       "wikiPageId": 4089143
     },
     {
@@ -277,7 +277,7 @@
       "title": "A Momentary Lapse of Reason",
       "year": 1987,
       "coverUrl": "pink floyd/amlor.jpg",
-      "price": 50,
+      "price": 40,
       "wikiPageId": 327421
     },
     {
@@ -285,7 +285,7 @@
       "title": "The Division Bell",
       "year": 1994,
       "coverUrl": "pink floyd/tdb.jpg",
-      "price": 50,
+      "price": 41,
       "wikiPageId": 357820
     },
     {
@@ -293,7 +293,7 @@
       "title": "The Endless River",
       "year": 2014,
       "coverUrl": "pink floyd/ter.jpg",
-      "price": 50,
+      "price": 77,
       "wikiPageId": 43226553
     }
   ]
