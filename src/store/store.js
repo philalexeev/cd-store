@@ -1,10 +1,13 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import jsonList from '../products.json';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    products: jsonList.products,
+    sortedProducts: [],
     cart: [],
     totalSum: 0
   },

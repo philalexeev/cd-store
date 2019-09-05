@@ -30,21 +30,16 @@
 
 <script>
 import ProductItem from './ProductItem'
-import jsonList from '../products.json'
 
 export default {
   name: 'Products',
   data () {
     return {
-      sortType: 'byDefault'
+      sortType: 'byDefault',
+      products: this.$store.state.products
     }
   },
   computed: {
-    products() {
-      return jsonList.products.forEach( function(elem, i) {
-        elem.index = i;
-      })
-    },
     sortedProducts () {
       switch (this.sortType) {
         case 'byDefault':
@@ -66,8 +61,13 @@ export default {
     'app-product-item': ProductItem
   },
   methods: {
+    addIndex() {
+      this.products.forEach( (elem, i) => {
+        elem.index = i;
+      })
+    },
     sortByDefault(d1, d2) {
-      return (d1.index.toLowerCase() > d2.index.toLowerCase()) ? 1 : -1;
+      return (d1.index > d2.index) ? 1 : -1;
     },
     sortByBandName(d1, d2) {
       return (d1.band.toLowerCase() > d2.band.toLowerCase()) ? 1 : -1;
@@ -84,6 +84,9 @@ export default {
     sortByYear(d1, d2) {
       return (d1.year > d2.year) ? -1 : 1
     }
+  },
+  beforeMount () {
+    this.addIndex()
   }
 }
 </script>
