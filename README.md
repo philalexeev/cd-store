@@ -8,6 +8,7 @@
 -[x] add sort select in store/productsList page
 -[ ] fix sorting (rebase it to vuex)
 -[x] add smooth transition among components
+-[ ] find the solution of svg-store (svg-symbols) for vue-cli & import svgsprite to the DOM
 
 ## Project setup
 ```
