@@ -10,8 +10,6 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "vue-custom-scrollbar": "^1.1.0",
-    "vue-gemini-scrollbar": "^2.0.1",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.1.2",
     "vuex": "^3.1.1",
@@ -25,9 +23,11 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "image-webpack-loader": "^6.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "webpack-svgstore-plugin": "^4.1.0"
   },
   "eslintConfig": {
     "root": true,

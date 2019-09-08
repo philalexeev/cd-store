@@ -14,8 +14,12 @@
       <h2 class="product__album-title">{{ albumTitle }}</h2>
       <h3 class="product__band-name">{{ bandName }}</h3>
       <h3 class="product__album-year">{{ albumYear }}</h3>
-<!--      <button class="product__btn btn btn&#45;&#45;orange" type="button" @click="addToCart">Add to cart</button>-->
-      <p class="product__album-price">{{ productPrice }}$</p>
+      <div class="product__album-price-wrap">
+        <button class="product__btn" type="button" @click="addToCart">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M24 10H14V0h-4v10H0v4h10v10h4V14h10z' fill='%2300BF07'/%3E%3C/svg%3E" alt="">
+        </button>
+        <p class="product__album-price">{{ productPrice }}$</p>
+      </div>
     </div>
   </router-link>
 </template>
@@ -85,15 +89,23 @@ export default {
     margin-top: 10px;
     color: #777;
   }
-  .product__album-price {
+  .product__album-price-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     align-self: stretch;
     margin-top: 10px;
+  }
+  .product__album-price {
     font-size: 24px;
     font-weight: bold;
-    text-align: right;
     color: #FF5C00;
   }
   .product__btn {
-    width: 100%;
+    width: 23px;
+    height: 23px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
   }
 </style>

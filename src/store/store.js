@@ -9,7 +9,7 @@ export default new Vuex.Store({
     products: jsonList.products,
     sortedProducts: [],
     cart: [],
-    totalSum: 0
+    totalSum: 0,
   },
   getters: {
     totalSum(state) {
