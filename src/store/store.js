@@ -12,7 +12,7 @@ export default new Vuex.Store({
     totalSum: 0,
   },
   getters: {
-    totalSum(state) {
+    totalSum: state => {
       state.totalSum = 0;
       for ( let i = 0; i < state.cart.length; i++ ) {
         state.totalSum += parseInt(state.cart[i].price)
