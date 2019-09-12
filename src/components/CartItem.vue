@@ -4,9 +4,17 @@
     <td class="cart__table-cell">{{ albumYear }}</td>
     <td class="cart__table-cell">{{ albumTitle }}</td>
     <td class="cart__table-cell">
-      <button class="cart__amount-btn cart__amount-btn-decrease" @click="decreaseAmount(index)">-</button>
+      <button class="cart__amount-btn cart__amount-btn-decrease" @click="decreaseAmount(index)">
+        <svg class="cart__amount-btn-icon">
+          <use xlink:href="#minus"></use>
+        </svg>
+      </button>
       <span class="cart__amount">{{ amount }}</span>
-      <button class="cart__amount-btn cart__amount-btn-increase" @click="increaseAmount(index)">+</button>
+      <button class="cart__amount-btn cart__amount-btn-increase" @click="increaseAmount(index)">
+        <svg class="cart__amount-btn-icon">
+          <use xlink:href="#plus"></use>
+        </svg>
+      </button>
     </td>
     <td class="cart__table-cell">{{ price }}$</td>
     <td class="cart__table-cell">
@@ -34,11 +42,17 @@ export default {
     },
     increaseAmount(index) {
       this.amount++
-      this.$store.state.cart[index].amount = this.amount
+      this.$store.commit('addAmount', {
+        index,
+        amount: this.amount
+      })
     },
     decreaseAmount(index) {
       this.amount < 2 ? this.amount = 1 : this.amount--
-      this.$store.state.cart[index].amount = this.amount
+      this.$store.commit('addAmount', {
+        index,
+        amount: this.amount
+      })
     }
   }
 }
@@ -63,14 +77,27 @@ export default {
     width: 70px;
     padding: 0 10px;
     text-align: center;
+    vertical-align: middle;
   }
 
   .cart__amount-btn {
     height: 27px;
     width: 27px;
-    background-color: pink;
+    padding: 3px;
     border: none;
+    background-color: transparent;
     cursor: pointer;
+    vertical-align: middle;
+    
+    &:hover .cart__amount-btn-icon {
+      fill: #FF5C00;
+    }
+  }
+
+  .cart__amount-btn-icon {
+    width: 21px;
+    height: 21px;
+    transition: fill 0.2s ease-in;
   }
 
   .cart__remove-item {

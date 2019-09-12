@@ -16,14 +16,7 @@
       <h2 class="product__album-title">{{ albumTitle }}</h2>
       <h3 class="product__band-name">{{ bandName }}</h3>
       <h3 class="product__album-year">{{ albumYear }}</h3>
-      <div class="product__album-price-wrap">
-        <button class="product__btn" type="button">
-          <svg class="product__btn-icon">
-            <use xlink:href="#plus"></use>
-          </svg>
-        </button>
-        <p class="product__album-price">{{ productPrice }}$</p>
-      </div>
+      <p class="product__album-price">{{ productPrice }}$</p>
     </div>
   </router-link>
 </template>
@@ -103,14 +96,8 @@ export default {
     margin-top: 10px;
     color: #777;
   }
-  .product__album-price-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-    margin-top: 10px;
-  }
   .product__album-price {
+    align-self: flex-end;
     font-size: 24px;
     font-weight: bold;
     color: #FF5C00;

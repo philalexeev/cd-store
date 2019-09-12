@@ -12,10 +12,14 @@ export default new Vuex.Store({
     totalSum: 0,
   },
   getters: {
-    totalSum: state => {
+    totalSum(state) {
       state.totalSum = 0;
       for ( let i = 0; i < state.cart.length; i++ ) {
-        state.totalSum += parseInt(state.cart[i].price)
+        if ( state.cart[i].amount ) {
+          state.totalSum += parseInt(state.cart[i].price) * state.cart[i].amount
+        } else {
+          state.totalSum += parseInt(state.cart[i].price)
+        }
       }
       return state.totalSum;
     }
@@ -26,6 +30,9 @@ export default new Vuex.Store({
     },
     removeItem(state, payload) {
       return state.cart.splice(payload, 1)
+    },
+    addAmount(state, payload) {
+      Vue.set(state.cart[payload.index], 'amount', payload.amount)
     }
   }
 })
