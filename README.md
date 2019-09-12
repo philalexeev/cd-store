@@ -3,12 +3,13 @@
 ## TODO
 
 - [ ] stylize cart ( add btns for "add to cart"... )
-- [ ] add contacts page
+- [x] add contacts page
 - [x] add preloader in album page in description section
 - [x] add sort select in store/productsList page
 - [ ] fix sorting (rebase it to vuex)
 - [x] add smooth transition among components
-- [ ] find the solution of svg-store (svg-symbols) for vue-cli & import svgsprite to the DOM
+- [x] find the solution of svg-store (svg-symbols) for vue-cli & import svgsprite to the DOM
+- [ ] fix cart ( multiple products )
 
 ## Project setup
 ```

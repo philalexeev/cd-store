@@ -17,21 +17,21 @@
       <ul class="contacts__links">
         <li class="contacts__links-item">
           <a class="contacts__link" href="#">
-            <svg class="contacts__link-icon">
+            <svg class="contacts__link-icon contacts__link-twitter">
               <use xlink:href="#twitter"></use>
             </svg>
           </a>
         </li>
         <li class="contacts__links-item">
           <a class="contacts__link" href="#">
-            <svg class="contacts__link-icon">
+            <svg class="contacts__link-icon contacts__link-instagram">
               <use xlink:href="#instagram"></use>
             </svg>
           </a>
         </li>
         <li class="contacts__links-item">
           <a class="contacts__link" href="#">
-            <svg class="contacts__link-icon">
+            <svg class="contacts__link-icon contacts__link-facebook">
               <use xlink:href="#facebook"></use>
             </svg>
           </a>
@@ -39,7 +39,7 @@
       </ul>
       <div class="contacts__offer">
         <p>&copy;Copyright</p>
-        <p>All Rights Reserved</p>
+        <p class="contacts__offer-right">All Rights Reserved</p>
       </div>
     </div>
   </div>
@@ -108,10 +108,39 @@
     display: block;
     width: 50px;
     height: 50px;
+    transition: filter 0.2s ease-in;
+  }
+
+  .contacts__link-twitter {
+    fill: #1da1f2;
+  
+    &:hover {
+      filter: drop-shadow(0 0 20px #1da1f2);
+    }
+  }
+
+  .contacts__link-instagram {
+    fill: #c13584;
+  
+    &:hover {
+      filter: drop-shadow(0 0 20px #c13584);
+    }
+  }
+
+  .contacts__link-facebook {
+    fill: #3b5998;
+  
+    &:hover {
+      filter: drop-shadow(0 0 20px #3b5998);
+    }
   }
 
   .contacts__offer {
     margin-top: 30px;
     text-align: right;
+  }
+
+  .contacts__offer-right {
+    margin-top: 5px;
   }
 </style>

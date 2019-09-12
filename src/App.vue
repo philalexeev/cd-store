@@ -36,6 +36,7 @@ export default {
     bottom: 0;
     background-image: url('./assets/misc/5007.jpg');
     background-repeat: repeat;
+    background-size: 50px 50px;
     z-index: -1;
   }
 </style>

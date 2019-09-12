@@ -1,11 +1,13 @@
 <template>
-  <router-link class="product__wrapper" :to="{ name: 'album', params: {
-    albumTitle: albumTitle,
-    bandName: bandName,
-    albumPrice: productPrice,
-    wikiPageId: wikiPageId,
-    albumYear: albumYear,
-    albumCover: `${albumCover ? albumCover : 'logo.png'}`
+  <router-link
+    class="product__wrapper"
+    :to="{ name: 'album', params: {
+      albumTitle: albumTitle,
+      bandName: bandName,
+      albumPrice: productPrice,
+      wikiPageId: wikiPageId,
+      albumYear: albumYear,
+      albumCover: `${albumCover ? albumCover : 'logo.png'}`
     }}">
     <div class="product__image">
       <img :src="require(`@/assets/products/${albumCover}`)" alt="">
@@ -15,8 +17,10 @@
       <h3 class="product__band-name">{{ bandName }}</h3>
       <h3 class="product__album-year">{{ albumYear }}</h3>
       <div class="product__album-price-wrap">
-        <button class="product__btn" type="button" @click="addToCart">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M24 10H14V0h-4v10H0v4h10v10h4V14h10z' fill='%2300BF07'/%3E%3C/svg%3E" alt="">
+        <button class="product__btn" type="button">
+          <svg class="product__btn-icon">
+            <use xlink:href="#plus"></use>
+          </svg>
         </button>
         <p class="product__album-price">{{ productPrice }}$</p>
       </div>
@@ -37,9 +41,15 @@ export default {
       default: 'logo.png'
     }
   },
-  data() {
-    return {
-
+  methods: {
+    addToCart() {
+      return this.$store.commit('addProduct', {
+        bandName: this.bandName,
+        albumYear: this.albumYear,
+        albumTitle: this.albumTitle,
+        price: this.albumPrice,
+        albumId: this.wikiPageId
+      })
     }
   }
 }
@@ -56,6 +66,10 @@ export default {
     text-decoration: none;
     color: #333;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    
+    &:hover .product__btn {
+      opacity: 1;
+    }
 
     @media screen and (min-width: 580px) {
       width: 250px;
@@ -102,10 +116,18 @@ export default {
     color: #FF5C00;
   }
   .product__btn {
+    opacity: 0;
     width: 23px;
     height: 23px;
     border: 0;
     background-color: transparent;
     cursor: pointer;
+    transition: opacity 0.2s ease-in;
+  }
+
+  .product__btn-icon {
+    width: 100%;
+    height: 100%;
+    fill: #00bf07;
   }
 </style>
