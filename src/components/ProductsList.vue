@@ -96,15 +96,19 @@ export default {
     display: flex;
     flex-direction: column;
     padding-bottom: 40px;
-    padding-top: 20px;
   }
 
   .products__sorting-select {
-    align-self: flex-end;
+    align-self: center;
     font-size: 20px;
-    width: 300px;
+    width: 280px;
     padding: 5px 10px;
     cursor: pointer;
+  
+    @media screen and (min-width: 580px) {
+      align-self: flex-end;
+      width: 300px;
+    }
   }
 
   .products__list {

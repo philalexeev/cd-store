@@ -29,7 +29,7 @@ export default {
 
   }
   .home__heading {
-    font-size: 180px;
+    font-size: 80px;
     line-height: 1;
     color: #333;
     text-transform: uppercase;
@@ -39,22 +39,23 @@ export default {
 
   .home__subheading-wrapper {
     position: relative;
-    display: flex;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
   }
 
   .home__subheading {
     flex-shrink: 0;
     display: inline-block;
     padding: 0 10px;
-    margin-right: 20px;
-    font-size: 30px;
+    /*margin-right: 20px;*/
+    font-size: 24px;
+    text-align: center;
     color: #333;
     z-index: 2;
   }
 
   .decoration-line {
     position: relative;
+    display: none;
     flex-grow: 1;
   }
 

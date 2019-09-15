@@ -18,3 +18,24 @@
 .fade-leave-active {
   transition: opacity 0.5s ease-in-out;
 }
+
+.slide-enter {
+  transform: translateY(-100%);
+}
+
+.slide-enter-to {
+  transform: translateY(65px);
+}
+
+.slide-leave {
+  transform: translateY(65px);
+}
+
+.slide-leave-to {
+  transform: translateY(-100%);
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.5s ease-in-out;
+}
