@@ -10,7 +10,6 @@ export default new Vuex.Store({
     sortedProducts: [],
     cart: [],
     totalSum: 0
-    // openedMenu: false
   },
   getters: {
     totalSum(state) {
@@ -34,10 +33,10 @@ export default new Vuex.Store({
     },
     addAmount(state, payload) {
       Vue.set(state.cart[payload.index], 'amount', payload.amount)
+    },
+    toggleMenu(state) {
+      document.body.classList.toggle('blocked')
+      document.querySelector('.header__nav').classList.toggle('header__nav--open')
     }
-    // toggleMenu(state) {
-    //   document.body.classList.toggle('blocked')
-    //   state.openedMenu = !state.openedMenu
-    // }
   }
 })
