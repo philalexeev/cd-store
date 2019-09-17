@@ -35,28 +35,56 @@ export default {
     text-transform: uppercase;
     text-shadow: 6px 7px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
+  
+    @media screen and (min-width: 870px) {
+      font-size: 120px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      font-size: 160px;
+    }
+  
+    @media screen and (min-width: 1500px) {
+      font-size: 180px;
+    }
   }
 
   .home__subheading-wrapper {
     position: relative;
     margin-bottom: 30px;
+  
+    @media screen and (min-width: 870px) {
+      display: flex;
+      margin-bottom: 80px;
+    }
   }
 
   .home__subheading {
     flex-shrink: 0;
     display: inline-block;
     padding: 0 10px;
-    /*margin-right: 20px;*/
     font-size: 24px;
     text-align: center;
     color: #333;
     z-index: 2;
+  
+    @media screen and (min-width: 870px) {
+      margin-right: 20px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      font-size: 30px;
+    }
   }
 
   .decoration-line {
     position: relative;
     display: none;
     flex-grow: 1;
+  
+    @media screen and (min-width: 870px) {
+      display: block;
+    }
   }
 
   .decoration-line::after {
