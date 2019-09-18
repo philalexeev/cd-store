@@ -11,6 +11,7 @@
 - [x] fix cart ( multiple products )
 - [x] adaptive menu (burger)
 - [ ] adaptive album
+- [ ] adaptive store (maybe little album icons)
 - [ ] adaptive cart
 - [ ] fix adaptive store ( smaller album icons )
 

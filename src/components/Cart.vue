@@ -3,7 +3,7 @@
     <div class="component__heading-wrapper">
       <div class="total">Total: {{ totalSum }}$</div>
     </div>
-    <table class="cart__table">
+    <ul class="cart__table">
       <cart-item
         v-for="(item, index) in cart"
         :key="item.wikiPageId"
@@ -13,7 +13,7 @@
         :price="item.price"
         :index="index"
       ></cart-item>
-    </table>
+    </ul>
   </div>
 </template>
 
@@ -57,13 +57,14 @@ export default {
   .cart__table {
     width: 100%;
     margin-top: 20px;
+    list-style: none;
   }
 
   .cart__table tr {
     transition: background-color 0.1s ease-in;
   }
 
-  .cart__table tr:nth-child(odd) {
+  .cart__table li:nth-child(odd) {
     background-color: #eee;
   }
 

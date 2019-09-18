@@ -100,6 +100,7 @@ img {
     bottom: 0;
     display: block;
     transition: all 0.1s ease-in;
+    z-index: -1;
   }
 
   &--orange {
@@ -114,7 +115,6 @@ img {
   &--large {
     width: 100%;
     padding: 15px;
-    font-size: 24px;
     font-weight: bold;
     text-align: center;
 

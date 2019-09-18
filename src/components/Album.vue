@@ -5,12 +5,16 @@
       <button
         :class="['btn', 'btn--large', addedToCart ? 'btn--done' : 'btn--orange']"
         type="button"
-        @click="addToCart">{{ `${addedToCart ? 'Added to Cart' : 'Add to Cart'}` }}</button>
+        @click="addToCart">
+          <span class="album__btn-inner">
+            <span class="album__btn-name">{{ `${addedToCart ? 'Added to Cart' : 'Add to Cart'}` }}</span>
+            <span class="album__price" ref="albumPrice">{{ albumPrice }}$</span>
+          </span>
+      </button>
     </div>
     <div class="album__description">
       <div class="album__heading-wrapper">
         <h1 class="album__heading">{{ albumTitle }}</h1>
-        <h2 class="album__price">{{ albumPrice }}$</h2>
       </div>
       <p class="album__review">{{ summaryDescription }}</p>
     </div>
@@ -60,6 +64,7 @@ export default {
         })
     },
     addToCart() {
+      this.$refs.albumPrice.classList.add('album__price--hidden');
       return this.$store.commit('addProduct', {
         bandName: this.bandName,
         albumYear: this.albumYear,
@@ -78,23 +83,51 @@ export default {
 <style scoped lang="scss">
   .album {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    padding: 50px 20px 50px;
+    /*padding: 50px 20px 50px;*/
+    padding: 20px;
   }
 
   .album__image-wrapper {
     display: inline-block;
     flex-shrink: 0;
-    width: 500px;
-    margin-right: 50px;
+    /*width: 500px;*/
+    /*margin-right: 50px;*/
+    width: 100%;
     font-size: 0;
   }
 
   .album__image {
-    width: 500px;
-    height: 500px;
+    /*width: 500px;*/
+    /*height: 500px;*/
+    width: 100%;
     background-color: #eee;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
+    margin-bottom: 20px;
+  }
+
+  .album__btn-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .album__btn-name {
+    flex-grow: 1;
+    padding: 15px 5px;
+    font-size: 24px;
+  }
+
+  .album__price {
+    flex-shrink: 0;
+    padding: 15px;
+    font-size: 24px;
+    background-color: darken(#FF5C00, 10%);
+  }
+
+  .btn--done .album__price {
+    background-color: darken(#00bf07, 10%);
   }
 
   .album__description {
@@ -104,17 +137,24 @@ export default {
 
   .album__heading-wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    /*justify-content: space-between;*/
   }
 
-  .album__heading,
-  .album__price {
-    font-size: 40px;
+  .album__heading {
+    /*font-size: 40px;*/
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  .album__heading {
+    margin-bottom: 20px;
   }
 
   .album__review {
     height: 50px;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
+    margin-top: 20px;
     line-height: 1.5;
     text-align: justify;
     background-image: url('../assets/misc/preloader.svg');
@@ -125,5 +165,7 @@ export default {
 
   .btn--large {
     width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
   }
 </style>

@@ -1,26 +1,32 @@
 <template>
-  <tr>
-    <td class="cart__table-cell">{{ bandName }}</td>
-    <td class="cart__table-cell">{{ albumYear }}</td>
-    <td class="cart__table-cell">{{ albumTitle }}</td>
-    <td class="cart__table-cell">
-      <button class="cart__amount-btn cart__amount-btn-decrease" @click="decreaseAmount(index)">
-        <svg class="cart__amount-btn-icon">
-          <use xlink:href="#minus"></use>
-        </svg>
-      </button>
-      <span class="cart__amount">{{ amount }}</span>
-      <button class="cart__amount-btn cart__amount-btn-increase" @click="increaseAmount(index)">
-        <svg class="cart__amount-btn-icon">
-          <use xlink:href="#plus"></use>
-        </svg>
-      </button>
-    </td>
-    <td class="cart__table-cell">{{ price }}$</td>
-    <td class="cart__table-cell">
-      <button class="cart__remove-item" type="button" @click="removeItem(index)">X</button>
-    </td>
-  </tr>
+  <li>
+    <div class="cart__block">
+      <div class="cart__table-cell">{{ bandName }}</div>
+    </div>
+    <div class="cart__block">
+      <div class="cart__table-cell">{{ albumYear }}</div>
+    </div>
+    <div class="cart__table-cell cart__album-title cart__block">{{ albumTitle }}</div>
+    <div class="cart__block cart__amount-wrapper">
+      <div class="cart__table-cell">
+        <button class="cart__amount-btn cart__amount-btn-decrease" @click="decreaseAmount(index)">
+          <svg class="cart__amount-btn-icon">
+            <use xlink:href="#minus"></use>
+          </svg>
+        </button>
+        <span class="cart__amount">{{ amount }}</span>
+        <button class="cart__amount-btn cart__amount-btn-increase" @click="increaseAmount(index)">
+          <svg class="cart__amount-btn-icon">
+            <use xlink:href="#plus"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="cart__table-cell">{{ price }}$</div>
+      <div class="cart__table-cell">
+        <button class="cart__remove-item" type="button" @click="removeItem(index)">X</button>
+      </div>
+    </div>
+  </li>
 </template>
 
 <script>
@@ -59,17 +65,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+  li > div {
+    display: flex;
+    align-items: center;
+  }
   .cart__table-cell {
-    padding: 10px 20px;
+    padding: 10px;
     white-space: nowrap;
   }
 
-  .cart__table-cell:nth-child(3) {
-    width: 100%;
+  .cart__album-title {
+    order: -1;
+    margin-right: auto;
   }
 
-  .cart__table-cell:last-child {
-    padding: 0;
+  .cart__amount-wrapper {
+    justify-content: space-between;
+    background-color: #ddd;
   }
 
   .cart__amount {
@@ -88,7 +104,7 @@ export default {
     background-color: transparent;
     cursor: pointer;
     vertical-align: middle;
-    
+
     &:hover .cart__amount-btn-icon {
       fill: #FF5C00;
     }
@@ -101,7 +117,7 @@ export default {
   }
 
   .cart__remove-item {
-    padding: 10px 20px;
+    width: 35px;
     background-color: transparent;
     border: none;
     cursor: pointer;
