@@ -8,7 +8,7 @@
         @click="addToCart">
           <span class="album__btn-inner">
             <span class="album__btn-name">{{ `${addedToCart ? 'Added to Cart' : 'Add to Cart'}` }}</span>
-            <span class="album__price" ref="albumPrice">{{ albumPrice }}$</span>
+            <span class="album__price">{{ albumPrice }}$</span>
           </span>
       </button>
     </div>
@@ -64,7 +64,6 @@ export default {
         })
     },
     addToCart() {
-      this.$refs.albumPrice.classList.add('album__price--hidden');
       return this.$store.commit('addProduct', {
         bandName: this.bandName,
         albumYear: this.albumYear,
@@ -87,6 +86,15 @@ export default {
     align-items: flex-start;
     /*padding: 50px 20px 50px;*/
     padding: 20px;
+
+    @media screen and (min-width: 870px) {
+      display: block;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   .album__image-wrapper {
@@ -96,15 +104,37 @@ export default {
     /*margin-right: 50px;*/
     width: 100%;
     font-size: 0;
+
+    @media screen and (min-width: 580px) {
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 870px) {
+      float: left;
+      margin-right: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      float: none;
+    }
+
+    @media screen and (min-width: 1500px) {
+      width: 500px;
+      margin-right: 50px;
+    }
   }
 
   .album__image {
-    /*width: 500px;*/
-    /*height: 500px;*/
     width: 100%;
     background-color: #eee;
-    /*margin-bottom: 50px;*/
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1500px) {
+      width: 500px;
+      height: 500px;
+      margin-bottom: 50px;
+    }
   }
 
   .album__btn-inner {
@@ -135,25 +165,17 @@ export default {
     color: #333;
   }
 
-  .album__heading-wrapper {
-    display: flex;
-    flex-direction: column;
-    /*justify-content: space-between;*/
-  }
-
   .album__heading {
-    /*font-size: 40px;*/
     font-size: 30px;
     line-height: 1;
-  }
 
-  .album__heading {
-    margin-bottom: 20px;
+    @media screen and (min-width: 1500px) {
+      font-size: 40px;
+    }
   }
 
   .album__review {
     height: 50px;
-    /*margin-top: 50px;*/
     margin-top: 20px;
     line-height: 1.5;
     text-align: justify;

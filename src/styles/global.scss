@@ -91,18 +91,6 @@ img {
   cursor: pointer;
   text-decoration: none;
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    transition: all 0.1s ease-in;
-    z-index: -1;
-  }
-
   &--orange {
     color: #fff;
     background-color: $orangered;
@@ -127,17 +115,15 @@ img {
 
   &--done {
     background-color: $green;
+    color: #fff;
   }
 
-  &--done::after {
-    border: 4px solid $green;
+  &:hover {
+    background-color: darken($orangered, 5%);
   }
 
-  &:hover::after {
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
+  &--done:hover {
+    background-color: darken($green, 5%);
   }
 
 }

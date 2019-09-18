@@ -10,10 +10,9 @@
 - [x] find the solution of svg-store (svg-symbols) for vue-cli & import svgsprite to the DOM
 - [x] fix cart ( multiple products )
 - [x] adaptive menu (burger)
-- [ ] adaptive album
+- [x] adaptive album
 - [ ] adaptive store (maybe little album icons)
 - [ ] adaptive cart
-- [ ] fix adaptive store ( smaller album icons )
 
 ## Project setup
 ```
