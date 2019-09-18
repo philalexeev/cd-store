@@ -13,6 +13,7 @@
 - [x] adaptive album
 - [ ] adaptive store (maybe little album icons)
 - [ ] adaptive cart
+- [ ] create search on store page
 
 ## Project setup
 ```
