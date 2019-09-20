@@ -5,6 +5,7 @@
       <button
         :class="['btn', 'btn--large', addedToCart ? 'btn--done' : 'btn--orange']"
         type="button"
+        ref="btn"
         @click="addToCart">
           <span class="album__btn-inner">
             <span class="album__btn-name">{{ `${addedToCart ? 'Added to Cart' : 'Add to Cart'}` }}</span>
@@ -65,6 +66,7 @@ export default {
         })
     },
     addToCart() {
+      this.$refs.btn.disabled = true;
       return this.$store.commit('addProduct', {
         bandName: this.bandName,
         albumYear: this.albumYear,
@@ -134,7 +136,6 @@ export default {
     @media screen and (min-width: 1500px) {
       width: 500px;
       height: 500px;
-      margin-bottom: 50px;
     }
   }
 
@@ -159,6 +160,10 @@ export default {
 
   .btn--done .album__price {
     background-color: darken(#00bf07, 10%);
+  }
+
+  .btn--done[disabled] .album__price {
+    background-color: darken(#6d996f, 10%);
   }
 
   .album__description {

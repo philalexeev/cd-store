@@ -126,4 +126,9 @@ img {
     background-color: darken($green, 5%);
   }
 
+  &[disabled] {
+    background-color: #6d996f;
+    cursor: auto;
+  }
+
 }

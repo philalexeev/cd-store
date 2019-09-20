@@ -14,6 +14,7 @@
 - [ ] adaptive store (maybe little album icons)
 - [ ] adaptive cart
 - [ ] fix currentAlbum and its functionality in vuex
+- [ ] create search on store page
 
 ## Project setup
 ```
