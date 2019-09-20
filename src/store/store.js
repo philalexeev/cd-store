@@ -41,7 +41,7 @@ export default new Vuex.Store({
       document.querySelector('.header__nav').classList.toggle('header__nav--open')
     },
     setCurrentAlbum(state, payload) {
-      Object.assign(state.currentAlbum, payload)
+      state.currentAlbum = payload
     }
   },
   plugins: [createPersistedState()]

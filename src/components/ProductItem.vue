@@ -1,14 +1,8 @@
 <template>
   <router-link
     class="product__wrapper"
-    :to="{ name: 'album', params: {
-      albumTitle: albumTitle,
-      bandName: bandName,
-      albumPrice: productPrice,
-      wikiPageId: wikiPageId,
-      albumYear: albumYear,
-      albumCover: `${albumCover ? albumCover : 'logo.png'}`
-    }}">
+    :to="{ name: 'album'}"
+    @click.native="setCurrentAlbum">
     <div class="product__image">
       <img :src="require(`@/assets/products/${albumCover}`)" alt="">
     </div>
@@ -43,6 +37,16 @@ export default {
         price: this.albumPrice,
         albumId: this.wikiPageId
       })
+    },
+    setCurrentAlbum() {
+      return this.$store.commit('setCurrentAlbum', {
+        albumTitle: this.albumTitle,
+        bandName: this.bandName,
+        albumPrice: this.productPrice,
+        wikiPageId: this.wikiPageId,
+        albumYear: this.albumYear,
+        albumCover: `${this.albumCover ? this.albumCover : 'logo.png'}`
+      })
     }
   }
 }
@@ -59,7 +63,7 @@ export default {
     text-decoration: none;
     color: #333;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
-    
+
     &:hover .product__btn {
       opacity: 1;
     }

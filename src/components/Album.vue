@@ -1,7 +1,7 @@
 <template>
   <div class="container album">
     <div class="album__image-wrapper">
-      <img class="album__image" :src="require(`@/assets/products/${albumCover}`)" alt="111">
+      <img class="album__image" :src="require(`@/assets/products/${albumKeys.albumCover}`)" alt="111">
       <button
         :class="['btn', 'btn--large', addedToCart ? 'btn--done' : 'btn--orange']"
         type="button"
@@ -9,13 +9,13 @@
         @click="addToCart">
           <span class="album__btn-inner">
             <span class="album__btn-name">{{ `${addedToCart ? 'Added to Cart' : 'Add to Cart'}` }}</span>
-            <span class="album__price">{{ albumPrice }}$</span>
+            <span class="album__price">{{ albumKeys.albumPrice }}$</span>
           </span>
       </button>
     </div>
     <div class="album__description">
       <div class="album__heading-wrapper">
-        <h1 class="album__heading">{{ albumTitle }}</h1>
+        <h1 class="album__heading">{{ albumKeys.albumTitle }}</h1>
       </div>
       <p class="album__review">{{ summaryDescription }}</p>
     </div>
@@ -27,16 +27,6 @@ import wikijs from 'wikijs';
 
 export default {
   name: 'Album',
-  props: {
-    albumTitle: String,
-    bandName: String,
-    albumYear: Number,
-    albumPrice: [String, Number],
-    wikiPageId: [String, Number],
-    albumCover: {
-      default: 'logo.png'
-    }
-  },
   data() {
     return {
       summaryDescription: '',
@@ -58,7 +48,7 @@ export default {
     getDescription() {
       let review = document.querySelector('.album__review');
       const cssStyles = 'height: auto;background-image: none;';
-      wikijs().findById(this.wikiPageId)
+      wikijs().findById(this.albumKeys.wikiPageId)
         .then(page => page.summary())
         .then(response => {
           review.style.cssText = cssStyles;
