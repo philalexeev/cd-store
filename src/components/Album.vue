@@ -38,7 +38,8 @@ export default {
   },
   data() {
     return {
-      summaryDescription: ''
+      summaryDescription: '',
+      albumKeys: this.$store.state.currentAlbum
     }
   },
   computed: {

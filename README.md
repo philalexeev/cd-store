@@ -13,6 +13,7 @@
 - [x] adaptive album
 - [ ] adaptive store (maybe little album icons)
 - [ ] adaptive cart
+- [ ] fix currentAlbum and its functionality in vuex
 
 ## Project setup
 ```

@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import jsonList from '../products.json';
+import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex);
 
@@ -9,7 +10,8 @@ export default new Vuex.Store({
     products: jsonList.products,
     sortedProducts: [],
     cart: [],
-    totalSum: 0
+    totalSum: 0,
+    currentAlbum: {}
   },
   getters: {
     totalSum(state) {
@@ -37,6 +39,10 @@ export default new Vuex.Store({
     toggleMenu(state) {
       document.body.classList.toggle('blocked')
       document.querySelector('.header__nav').classList.toggle('header__nav--open')
+    },
+    setCurrentAlbum(state, payload) {
+      Object.assign(state.currentAlbum, payload)
     }
-  }
+  },
+  plugins: [createPersistedState()]
 })
