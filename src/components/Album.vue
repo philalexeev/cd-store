@@ -4,6 +4,7 @@
       <img class="album__image" :src="require(`@/assets/products/${albumKeys.albumCover}`)" alt="111">
       <button
         :class="['btn', 'btn--large', addedToCart ? 'btn--done' : 'btn--orange']"
+        :disabled="addedToCart"
         type="button"
         ref="btn"
         @click="addToCart">
@@ -37,7 +38,7 @@ export default {
     addedToCart() {
       let cart = this.$store.state.cart;
       for (let i = 0; i < cart.length; i++) {
-        if ( this.wikiPageId === cart[i].albumId ) {
+        if ( this.albumKeys.wikiPageId === cart[i].albumId ) {
           return true
         }
       }
@@ -58,11 +59,11 @@ export default {
     addToCart() {
       this.$refs.btn.disabled = true;
       return this.$store.commit('addProduct', {
-        bandName: this.bandName,
-        albumYear: this.albumYear,
-        albumTitle: this.albumTitle,
-        price: this.albumPrice,
-        albumId: this.wikiPageId
+        bandName: this.albumKeys.bandName,
+        albumYear: this.albumKeys.albumYear,
+        albumTitle: this.albumKeys.albumTitle,
+        price: this.albumKeys.albumPrice,
+        albumId: this.albumKeys.wikiPageId
       })
     }
   },

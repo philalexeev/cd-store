@@ -1,5 +1,6 @@
 <template>
   <li>
+    <div class="cart__album-image"></div>
     <div class="cart__block">
       <div class="cart__table-cell">{{ bandName }}</div>
     </div>
@@ -7,7 +8,7 @@
       <div class="cart__table-cell">{{ albumYear }}</div>
     </div>
     <div class="cart__table-cell cart__album-title cart__block">{{ albumTitle }}</div>
-    <div class="cart__block cart__amount-wrapper">
+    <div class="cart__amount-wrapper">
       <div class="cart__table-cell">
         <button class="cart__amount-btn cart__amount-btn-decrease" @click="decreaseAmount(index)">
           <svg class="cart__amount-btn-icon">
@@ -21,10 +22,10 @@
           </svg>
         </button>
       </div>
-      <div class="cart__table-cell">{{ price }}$</div>
-      <div class="cart__table-cell">
-        <button class="cart__remove-item" type="button" @click="removeItem(index)">X</button>
+      <div class="cart__price">
+        <span>{{ price }}$</span>
       </div>
+      <button class="cart__remove-item" type="button" @click="removeItem(index)">X</button>
     </div>
   </li>
 </template>
@@ -66,8 +67,8 @@ export default {
 
 <style scoped lang="scss">
   li {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
   }
   li > div {
     display: flex;
@@ -76,8 +77,19 @@ export default {
   .cart__table-cell {
     padding: 10px;
     white-space: nowrap;
+    
+    &-remove {
+      display: flex;
+      align-items: stretch;
+      padding: 0;
+    }
   }
-
+  .cart__album-image {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-color: #f00;
+  }
   .cart__album-title {
     order: -1;
     margin-right: auto;
@@ -85,6 +97,7 @@ export default {
 
   .cart__amount-wrapper {
     justify-content: space-between;
+    align-items: stretch;
     background-color: #ddd;
   }
 
@@ -117,7 +130,7 @@ export default {
   }
 
   .cart__remove-item {
-    width: 35px;
+    width: 47px;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -127,5 +140,11 @@ export default {
       background-color: #d03;
       color: #fff;
     }
+  }
+  
+  .cart__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>

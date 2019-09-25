@@ -63,9 +63,11 @@ export default {
     text-decoration: none;
     color: #333;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.2s ease-in, transform 0.2s ease-in;
 
-    &:hover .product__btn {
-      opacity: 1;
+    &:hover, &:focus {
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 1);
+      transform: scale(1.01) translateY(-3px);
     }
 
     @media screen and (min-width: 580px) {
@@ -105,20 +107,5 @@ export default {
     font-size: 24px;
     font-weight: bold;
     color: #FF5C00;
-  }
-  .product__btn {
-    opacity: 0;
-    width: 23px;
-    height: 23px;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-    transition: opacity 0.2s ease-in;
-  }
-
-  .product__btn-icon {
-    width: 100%;
-    height: 100%;
-    fill: #00bf07;
   }
 </style>
