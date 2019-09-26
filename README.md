@@ -7,13 +7,13 @@
 - [x] add sort select in store/productsList page
 - [ ] fix sorting (rebase it to vuex)
 - [x] add smooth transition among components
-- [x] find the solution of svg-store (svg-symbols) for vue-cli & import svgsprite to the DOM
+- [ ] find the solution of svg-store (svg-symbols) for vue-cli & import svgsprite to the DOM
 - [x] fix cart ( multiple products )
 - [x] adaptive menu (burger)
 - [x] adaptive album
 - [ ] adaptive store (maybe little album icons)
 - [ ] adaptive cart
-- [ ] fix currentAlbum and its functionality in vuex
+- [x] fix currentAlbum and its functionality in vuex
 - [ ] create search on store page
 
 ## Project setup
