@@ -12,6 +12,7 @@
         :albumTitle="item.albumTitle"
         :price="item.price"
         :index="index"
+        :albumCover="item.albumCover"
       ></cart-item>
     </ul>
   </div>
@@ -62,10 +63,6 @@ export default {
 
   .cart__table tr {
     transition: background-color 0.1s ease-in;
-  }
-
-  .cart__table li:nth-child(odd) {
-    background-color: #eee;
   }
 
   .cart__table tr:hover {

@@ -14,7 +14,8 @@
             to="/cart"
             tag="a"
             active-class="burger-btn__cart-link--active"
-            class="burger-btn__cart-link">
+            class="burger-btn__cart-link"
+            @click.native="routeClick">
           <svg class="burger-btn__cart-icon">
             <use xlink:href="#cart"></use>
           </svg>

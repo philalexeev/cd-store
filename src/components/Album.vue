@@ -59,6 +59,7 @@ export default {
     addToCart() {
       this.$refs.btn.disabled = true;
       return this.$store.commit('addProduct', {
+        albumCover: this.albumKeys.albumCover,
         bandName: this.albumKeys.bandName,
         albumYear: this.albumKeys.albumYear,
         albumTitle: this.albumKeys.albumTitle,

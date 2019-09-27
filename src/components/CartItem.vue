@@ -1,13 +1,14 @@
 <template>
-  <li>
-    <div class="cart__album-image"></div>
-    <div class="cart__block">
-      <div class="cart__table-cell">{{ bandName }}</div>
+  <li class="cart__item">
+    <div class="cart__item-description clearfix">
+      <div class="cart__album-image-wrapper">
+        <img class="cart__album-image" :src="require(`@/assets/products/${albumCover}`)" alt="111">
+      </div>
+      <div class="cart__block">
+        <div class="cart__table-cell cart__band-name">{{ bandName }}</div>
+      </div>
+      <div class="cart__table-cell cart__album-title cart__block">{{ albumTitle }}</div>
     </div>
-    <div class="cart__block">
-      <div class="cart__table-cell">{{ albumYear }}</div>
-    </div>
-    <div class="cart__table-cell cart__album-title cart__block">{{ albumTitle }}</div>
     <div class="cart__amount-wrapper">
       <div class="cart__table-cell">
         <button class="cart__amount-btn cart__amount-btn-decrease" @click="decreaseAmount(index)">
@@ -33,7 +34,7 @@
 <script>
 export default {
   name: 'CartItem',
-  props: ['bandName', 'albumYear', 'albumTitle', 'price', 'index'],
+  props: ['bandName', 'albumYear', 'albumTitle', 'price', 'index', 'albumCover'],
   data() {
     return {
       amount: 1,
@@ -66,36 +67,43 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  li {
-    /*display: flex;*/
-    /*flex-direction: column;*/
+  .cart__item {
+    background-color: #eee;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   }
-  li > div {
-    display: flex;
-    align-items: center;
+  .cart__item + .cart__item {
+    margin-top: 20px;
   }
   .cart__table-cell {
     padding: 10px;
-    white-space: nowrap;
-    
+    font-size: 18px;
+    line-height: 1;
+
     &-remove {
       display: flex;
       align-items: stretch;
       padding: 0;
     }
   }
+  .cart__album-image-wrapper {
+    float: right;
+    margin: 0 0 0 10px;
+    font-size: 0;
+    line-height: 0;
+  }
   .cart__album-image {
-    display: none;
-    width: 30px;
-    height: 30px;
-    background-color: #f00;
+    width: 100px;
+    height: 100px;
+  }
+  .cart__band-name {
+    padding-bottom: 0;
   }
   .cart__album-title {
-    order: -1;
     margin-right: auto;
   }
 
   .cart__amount-wrapper {
+    display: flex;
     justify-content: space-between;
     align-items: stretch;
     background-color: #ddd;
@@ -141,10 +149,11 @@ export default {
       color: #fff;
     }
   }
-  
+
   .cart__price {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
   }
 </style>
