@@ -1,14 +1,21 @@
 <template>
   <div class="component container products__page">
     <div class="products">
-      <select class="products__sorting-select" name="sorting" id="sorting" v-model="sortType">
-        <option value="byDefault">Default</option>
-        <option value="byBandName">Band Name</option>
-        <option value="byAlbumTitle">Album Title</option>
-        <option value="byPrice(highToLow)">Price (high to low)</option>
-        <option value="byPrice(lowToHigh)">Price (low to high)</option>
-        <option value="byYear">Year</option>
-      </select>
+      <div class="products__controls">
+        <input
+          class="product__input products__search"
+          type="search"
+          placeholder="Search album, band, year..."
+          v-model="search">
+        <select class="product__input products__sorting-select" name="sorting" id="sorting" v-model="sortType">
+          <option value="byDefault">Default</option>
+          <option value="byBandName">Band Name</option>
+          <option value="byAlbumTitle">Album Title</option>
+          <option value="byPrice(highToLow)">Price (high to low)</option>
+          <option value="byPrice(lowToHigh)">Price (low to high)</option>
+          <option value="byYear">Year</option>
+        </select>
+      </div>
       <ul class="products__list">
         <li
           class="products__list-item"
@@ -35,6 +42,7 @@ export default {
   name: 'Products',
   data () {
     return {
+      search: '',
       sortType: 'byDefault',
       products: this.$store.state.products
     }
@@ -43,18 +51,23 @@ export default {
     sortedProducts () {
       switch (this.sortType) {
         case 'byDefault':
-          return this.products.sort(this.sortByDefault);
+          return this.filteredSearchProducts.sort(this.sortByDefault);
         case 'byBandName':
-          return this.products.sort(this.sortByBandName);
+          return this.filteredSearchProducts.sort(this.sortByBandName);
         case 'byAlbumTitle':
-          return this.products.sort(this.sortByAlbumTitle);
+          return this.filteredSearchProducts.sort(this.sortByAlbumTitle);
         case 'byPrice(highToLow)':
-          return this.products.sort(this.sortByPriceToLow);
+          return this.filteredSearchProducts.sort(this.sortByPriceToLow);
         case 'byPrice(lowToHigh)':
-          return this.products.sort(this.sortByPriceToHigh);
+          return this.filteredSearchProducts.sort(this.sortByPriceToHigh);
         case 'byYear':
-          return this.products.sort(this.sortByYear);
+          return this.filteredSearchProducts.sort(this.sortByYear);
       }
+    },
+    filteredSearchProducts() {
+      return this.products.filter(album => {
+        return album.title.toLowerCase().includes(this.search.toLowerCase())
+      })
     }
   },
   components: {
@@ -97,12 +110,19 @@ export default {
     flex-direction: column;
     padding-bottom: 40px;
   }
-
-  .products__sorting-select {
-    align-self: center;
+  
+  .products__controls {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .product__input {
     font-size: 20px;
     width: 280px;
     padding: 5px 10px;
+  }
+
+  .products__sorting-select {
     cursor: pointer;
   
     @media screen and (min-width: 580px) {

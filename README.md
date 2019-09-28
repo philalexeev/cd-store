@@ -2,20 +2,10 @@
 
 ## TODO
 
-- [x] add contacts page
-- [x] add preloader in album page in description section
-- [x] add sort select in store/productsList page
 - [ ] fix sorting (rebase it to vuex) => fix state of sorting among page refreshing
-- [x] add smooth transition among components
 - [ ] find the solution of svg-store (svg-symbols) for vue-cli & import svgsprite to the DOM
-- [x] fix cart ( multiple products )
-- [x] adaptive menu (burger)
-- [x] adaptive album
 - [ ] adaptive store (maybe little album icons)
-- [ ] adaptive cart
-- [x] fix currentAlbum and its functionality in vuex
-- [ ] create search on store page
-- [ ] 
+- [ ] adaptive cart 
 
 ## Project setup
 ```

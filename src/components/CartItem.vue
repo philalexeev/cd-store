@@ -4,10 +4,13 @@
       <div class="cart__album-image-wrapper">
         <img class="cart__album-image" :src="require(`@/assets/products/${albumCover}`)" alt="111">
       </div>
-      <div class="cart__block">
-        <div class="cart__table-cell cart__band-name">{{ bandName }}</div>
-      </div>
+      <div class="cart__table-cell cart__band-name cart__block">{{ bandName }}</div>
       <div class="cart__table-cell cart__album-title cart__block">{{ albumTitle }}</div>
+      <div class="cart__additions">
+        <hr class="division-line">
+        <a class="cart__link" href="#">Delivery options</a>
+        <a class="cart__link" href="#">Read description</a>
+      </div>
     </div>
     <div class="cart__amount-wrapper">
       <div class="cart__table-cell">
@@ -66,7 +69,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   .cart__item {
     background-color: #eee;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -84,22 +87,47 @@ export default {
       align-items: stretch;
       padding: 0;
     }
+  
+    @media screen and (min-width: 580px) {
+      font-size: 20px;
+    }
   }
   .cart__album-image-wrapper {
-    float: right;
-    margin: 0 0 0 10px;
+    float: left;
+    margin: 0 10px 0 0;
     font-size: 0;
     line-height: 0;
   }
   .cart__album-image {
-    width: 100px;
-    height: 100px;
+    width: 102px;
+    height: 102px;
+  
+    @media screen and (min-width: 870px) {
+      width: 200px;
+      height: 200px;
+    }
   }
   .cart__band-name {
     padding-bottom: 0;
+    color: #777;
   }
   .cart__album-title {
     margin-right: auto;
+    font-weight: bold;
+  }
+  
+  .cart__link {
+    display: block;
+    color: #FF5C00;
+    text-decoration: none;
+    
+    &:hover {
+      color: darken(#FF5C00, 5%);
+    }
+    
+    & + .cart__link {
+      margin-top: 10px;
+    }
   }
 
   .cart__amount-wrapper {
@@ -139,10 +167,11 @@ export default {
 
   .cart__remove-item {
     width: 47px;
-    background-color: transparent;
+    color: #000;
+    background-color: #aaa;
     border: none;
     cursor: pointer;
-    transition: all 0.1s ease-in;
+    transition: background-color 0.1s ease-in, color 0.1s ease-in;
 
     &:hover {
       background-color: #d03;
