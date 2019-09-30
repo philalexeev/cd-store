@@ -2,19 +2,26 @@
   <div class="component container products__page">
     <div class="products">
       <div class="products__controls">
-        <input
-          class="product__input products__search"
-          type="search"
-          placeholder="Search album, band, year..."
-          v-model="search">
-        <select class="product__input products__sorting-select" name="sorting" id="sorting" v-model="sortType">
-          <option value="byDefault">Default</option>
-          <option value="byBandName">Band Name</option>
-          <option value="byAlbumTitle">Album Title</option>
-          <option value="byPrice(highToLow)">Price (high to low)</option>
-          <option value="byPrice(lowToHigh)">Price (low to high)</option>
-          <option value="byYear">Year</option>
-        </select>
+        <div class="products__search-wrapper">
+          <label class="visuallyhidden" for="search">Search input</label>
+          <input
+            id="search"
+            class="product__input products__search"
+            type="search"
+            placeholder="Search album"
+            v-model="search">
+        </div>
+        <div class="products__select-wrapper">
+          <label class="visuallyhidden" for="sorting">Sort typy select</label>
+          <select class="product__input products__sorting-select" name="sorting" id="sorting" v-model="sortType">
+            <option value="byDefault">Default</option>
+            <option value="byBandName">Band Name</option>
+            <option value="byAlbumTitle">Album Title</option>
+            <option value="byPrice(highToLow)">Price (high to low)</option>
+            <option value="byPrice(lowToHigh)">Price (low to high)</option>
+            <option value="byYear">Year</option>
+          </select>
+        </div>
       </div>
       <ul class="products__list">
         <li
@@ -108,46 +115,75 @@ export default {
   .products {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-bottom: 40px;
   }
   
   .products__controls {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  
+    @media screen and (min-width: 580px) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  .products__search-wrapper,
+  .products__select-wrapper {
+    width: 100%;
+  
+    @media screen and (min-width: 580px) {
+      width: 250px;
+    }
+  
+    @media screen and (min-width: 870px) {
+      width: 300px;
+    }
+  
+    @media screen and (min-width: 1500px) {
+      width: 350px;
+    }
   }
   
   .product__input {
     font-size: 20px;
-    width: 280px;
+    width: 100%;
     padding: 5px 10px;
   }
 
   .products__sorting-select {
+    margin-top: 10px;
     cursor: pointer;
   
     @media screen and (min-width: 580px) {
-      align-self: flex-end;
-      width: 300px;
+      margin-top: 0;
     }
   }
 
   .products__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     list-style: none;
-
-    @media screen and (min-width: 580px) {
-      justify-content: flex-start;
-    }
   }
+  
   .products__list-item {
     display: flex;
     align-items: stretch;
-    margin-right: 0;
+    width: 47%;
+    margin-right: 6%;
+  
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
 
     @media screen and (min-width: 580px) {
+      width: auto;
       margin-right: 20px;
 
       &:nth-child(2n) {

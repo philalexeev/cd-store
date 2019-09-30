@@ -57,6 +57,17 @@ body {
   }
 }
 
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -130,7 +141,6 @@ img {
     background-color: #6d996f;
     cursor: auto;
   }
-
 }
 
 .clearfix::after {
@@ -140,6 +150,7 @@ img {
 }
 
 .division-line {
+  width: 100%;
   margin: 10px 10px 10px 0;
   border: 1px solid #ccc;
 }

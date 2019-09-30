@@ -99,10 +99,9 @@ export default {
     /*margin-right: 50px;*/
     width: 100%;
     font-size: 0;
-
-    @media screen and (min-width: 580px) {
-      width: 400px;
-      margin: 0 auto;
+  
+    @media screen and (min-width: 360px) {
+      width: 320px;
     }
 
     @media screen and (min-width: 870px) {
@@ -175,17 +174,26 @@ export default {
   .album__review {
     height: 50px;
     margin-top: 20px;
+    font-size: 16px;
     line-height: 1.5;
     text-align: justify;
     background-image: url('../assets/misc/preloader.svg');
     background-repeat: no-repeat;
     background-size: 160px 30px;
     background-position: center top;
+  
+    @media screen and (min-width: 870px) {
+      font-size: 20px;
+    }
   }
 
   .btn--large {
     width: 100%;
     padding: 0;
     margin-bottom: 20px;
+  
+    @media screen and (min-width: 870px) {
+      margin-bottom: 0;
+    }
   }
 </style>

@@ -1,25 +1,26 @@
 <template>
   <li class="cart__item">
     <div class="cart__item-description clearfix">
-      <div class="cart__album-image-wrapper">
-        <img class="cart__album-image" :src="require(`@/assets/products/${albumCover}`)" alt="111">
+      <div class="cart__item-image-wrapper">
+        <img class="cart__item-image" :src="require(`@/assets/products/${albumCover}`)" alt="111">
       </div>
-      <div class="cart__table-cell cart__band-name cart__block">{{ bandName }}</div>
-      <div class="cart__table-cell cart__album-title cart__block">{{ albumTitle }}</div>
-      <div class="cart__additions">
-        <hr class="division-line">
-        <a class="cart__link" href="#">Delivery options</a>
-        <a class="cart__link" href="#">Read description</a>
+      <div class="cart__item-details">
+        <div class="cart__text cart__band-name cart__block">{{ bandName }}</div>
+        <div class="cart__text cart__album-title cart__block">{{ albumTitle }}</div>
       </div>
     </div>
-    <div class="cart__amount-wrapper">
-      <div class="cart__table-cell">
+    <div class="cart__additions">
+      <a class="cart__link" href="#">Delivery options</a>
+      <a class="cart__link" href="#">Read description</a>
+    </div>
+    <div class="cart__amount">
+      <div class="cart__amount-wrapper">
         <button class="cart__amount-btn cart__amount-btn-decrease" @click="decreaseAmount(index)">
           <svg class="cart__amount-btn-icon">
             <use xlink:href="#minus"></use>
           </svg>
         </button>
-        <span class="cart__amount">{{ amount }}</span>
+        <span class="cart__amount-number">{{ amount }}</span>
         <button class="cart__amount-btn cart__amount-btn-increase" @click="increaseAmount(index)">
           <svg class="cart__amount-btn-icon">
             <use xlink:href="#plus"></use>
@@ -71,15 +72,21 @@ export default {
 
 <style lang="scss">
   .cart__item {
+    display: flex;
+    flex-direction: column;
     background-color: #eee;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
   }
   .cart__item + .cart__item {
     margin-top: 20px;
   }
-  .cart__table-cell {
-    padding: 10px;
-    font-size: 18px;
+  .cart__text {
+    padding: 10px 10px 10px 0;
+    font-size: 16px;
     line-height: 1;
 
     &-remove {
@@ -92,21 +99,26 @@ export default {
       font-size: 20px;
     }
   }
-  .cart__album-image-wrapper {
+  
+  .cart__item-description {
+    @media screen and (min-width: 1200px) {
+      flex-grow: 1;
+    }
+  }
+  
+  .cart__item-image-wrapper {
     float: left;
-    margin: 0 10px 0 0;
+    width: 120px;
+    margin-right: 10px;
     font-size: 0;
     line-height: 0;
   }
-  .cart__album-image {
-    width: 102px;
-    height: 102px;
   
-    @media screen and (min-width: 870px) {
-      width: 200px;
-      height: 200px;
-    }
+  .cart__item-details {
+    flex-grow: 1;
+    padding: 0 10px;
   }
+  
   .cart__band-name {
     padding-bottom: 0;
     color: #777;
@@ -116,28 +128,60 @@ export default {
     font-weight: bold;
   }
   
+  .cart__additions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    padding: 10px;
+    background-color: #ddd;
+  
+    @media screen and (min-width: 1200px) {
+      justify-content: center;
+    }
+  }
+  
   .cart__link {
     display: block;
     color: #FF5C00;
+    font-size: 16px;
     text-decoration: none;
     
     &:hover {
-      color: darken(#FF5C00, 5%);
+      color: #f00;
     }
     
     & + .cart__link {
       margin-top: 10px;
     }
-  }
-
-  .cart__amount-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    background-color: #ddd;
+  
+    @media screen and (min-width: 580px) {
+      font-size: 20px;
+    }
   }
 
   .cart__amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-shrink: 0;
+    background-color: #eee;
+  
+    @media screen and (min-width: 1200px) {
+      flex-direction: column;
+    }
+  }
+  
+  .cart__amount-wrapper {
+    flex-shrink: 0;
+    padding: 10px;
+  
+    @media screen and (min-width: 1200px) {
+      padding: 5px 10px;
+    }
+  }
+
+  .cart__amount-number {
     display: inline-block;
     width: 70px;
     padding: 0 10px;
@@ -166,6 +210,7 @@ export default {
   }
 
   .cart__remove-item {
+    flex-shrink: 0;
     width: 47px;
     color: #000;
     background-color: #aaa;
@@ -177,12 +222,23 @@ export default {
       background-color: #d03;
       color: #fff;
     }
+  
+    @media screen and (min-width: 1200px) {
+      width: auto;
+      height: 37px;
+    }
   }
 
   .cart__price {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     font-weight: bold;
+    background-color: #ccc;
+  
+    @media screen and (min-width: 1200px) {
+      height: 100%;
+    }
   }
 </style>

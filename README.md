@@ -4,8 +4,8 @@
 
 - [ ] fix sorting (rebase it to vuex) => fix state of sorting among page refreshing
 - [ ] find the solution of svg-store (svg-symbols) for vue-cli & import svgsprite to the DOM
-- [ ] adaptive store (maybe little album icons)
-- [ ] adaptive cart 
+- [ ] add map placeholder 
+- [ ] fix cart link mobile click
 
 ## Project setup
 ```
