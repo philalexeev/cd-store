@@ -79,7 +79,10 @@ export default {
     toggleMenu() {
       this.$store.commit('toggleMenu')
     },
-    routeClick() {
+    routeClick(event) {
+      if ( event.target.closest('.burger-btn__cart-link') && !this.$store.state.isMenuOpened ) {
+        return
+      }
       if ( window.matchMedia('(max-width: 580px)').matches ) {
         this.toggleMenu()
       }

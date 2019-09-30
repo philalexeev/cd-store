@@ -11,7 +11,8 @@ export default new Vuex.Store({
     sortedProducts: [],
     cart: [],
     totalSum: 0,
-    currentAlbum: {}
+    currentAlbum: {},
+    isMenuOpened: false
   },
   getters: {
     totalSum(state) {
@@ -39,6 +40,7 @@ export default new Vuex.Store({
     toggleMenu(state) {
       document.body.classList.toggle('blocked')
       document.querySelector('.header__nav').classList.toggle('header__nav--open')
+      state.isMenuOpened = !state.isMenuOpened
     },
     setCurrentAlbum(state, payload) {
       state.currentAlbum = payload
