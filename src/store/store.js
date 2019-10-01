@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import jsonList from '../products.json';
 import createPersistedState from 'vuex-persistedstate'
+import sharedMutations from 'vuex-shared-mutations';
 
 Vue.use(Vuex);
 
@@ -31,7 +32,7 @@ export default new Vuex.Store({
     addProduct(state, payload) {
       state.cart.unshift(payload)
     },
-    removeItem(state, payload) {
+    removeProduct(state, payload) {
       return state.cart.splice(payload, 1)
     },
     addAmount(state, payload) {
@@ -46,5 +47,5 @@ export default new Vuex.Store({
       state.currentAlbum = payload
     }
   },
-  plugins: [createPersistedState()]
+  plugins: [createPersistedState(), sharedMutations({ predicate: ['addProduct', 'removeProduct', 'addAmount'] })]
 })

@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     removeItem(index) {
-      this.$store.commit('removeItem', index)
+      this.$store.commit('removeProduct', index)
     },
     increaseAmount(index) {
       this.amount++
@@ -76,7 +76,7 @@ export default {
     flex-direction: column;
     background-color: #eee;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  
+
     @media screen and (min-width: 1200px) {
       flex-direction: row;
     }
@@ -94,18 +94,18 @@ export default {
       align-items: stretch;
       padding: 0;
     }
-  
+
     @media screen and (min-width: 580px) {
       font-size: 20px;
     }
   }
-  
+
   .cart__item-description {
     @media screen and (min-width: 1200px) {
       flex-grow: 1;
     }
   }
-  
+
   .cart__item-image-wrapper {
     float: left;
     width: 120px;
@@ -113,12 +113,12 @@ export default {
     font-size: 0;
     line-height: 0;
   }
-  
+
   .cart__item-details {
     flex-grow: 1;
     padding: 0 10px;
   }
-  
+
   .cart__band-name {
     padding-bottom: 0;
     color: #777;
@@ -127,7 +127,7 @@ export default {
     margin-right: auto;
     font-weight: bold;
   }
-  
+
   .cart__additions {
     display: flex;
     flex-direction: column;
@@ -135,26 +135,26 @@ export default {
     flex-shrink: 0;
     padding: 10px;
     background-color: #ddd;
-  
+
     @media screen and (min-width: 1200px) {
       justify-content: center;
     }
   }
-  
+
   .cart__link {
     display: block;
     color: #FF5C00;
     font-size: 16px;
     text-decoration: none;
-    
+
     &:hover {
       color: #f00;
     }
-    
+
     & + .cart__link {
       margin-top: 10px;
     }
-  
+
     @media screen and (min-width: 580px) {
       font-size: 20px;
     }
@@ -166,16 +166,16 @@ export default {
     align-items: stretch;
     flex-shrink: 0;
     background-color: #eee;
-  
+
     @media screen and (min-width: 1200px) {
       flex-direction: column;
     }
   }
-  
+
   .cart__amount-wrapper {
     flex-shrink: 0;
     padding: 10px;
-  
+
     @media screen and (min-width: 1200px) {
       padding: 5px 10px;
     }
@@ -222,7 +222,7 @@ export default {
       background-color: #d03;
       color: #fff;
     }
-  
+
     @media screen and (min-width: 1200px) {
       width: auto;
       height: 37px;
@@ -236,7 +236,7 @@ export default {
     width: 100%;
     font-weight: bold;
     background-color: #ccc;
-  
+
     @media screen and (min-width: 1200px) {
       height: 100%;
     }

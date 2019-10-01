@@ -11,7 +11,7 @@ export const routes = [
     component: Store,
     children: [
       { path: '', component: Products },
-      { path: 'albums', component: Album, name: 'album', props: true }
+      { path: 'album', component: Album, name: 'album', props: true }
     ]
   },
   { path: '/contacts', component: Contacts },

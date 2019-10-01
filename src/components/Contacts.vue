@@ -64,6 +64,10 @@
   .contacts__map {
     height: 500px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    background-image: url('../assets/misc/preloader.svg');
+    background-size: 160px 30px;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .contacts__details {
@@ -81,7 +85,7 @@
 
   .contacts__details-link {
     color: #000;
-    text-decoration: none;
+    text-decoration: underline;
 
     &:hover {
       color: #FF5C00;
@@ -103,7 +107,7 @@
   .contacts__links-item + .contacts__links-item {
     margin-left: 20px;
   }
-  
+
   .contacts__link-icon {
     display: block;
     width: 50px;
@@ -113,7 +117,7 @@
 
   .contacts__link-twitter {
     fill: #1da1f2;
-  
+
     &:hover {
       filter: drop-shadow(0 0 20px #1da1f2);
     }
@@ -121,7 +125,7 @@
 
   .contacts__link-instagram {
     fill: #c13584;
-  
+
     &:hover {
       filter: drop-shadow(0 0 20px #c13584);
     }
@@ -129,7 +133,7 @@
 
   .contacts__link-facebook {
     fill: #3b5998;
-  
+
     &:hover {
       filter: drop-shadow(0 0 20px #3b5998);
     }
