@@ -45,7 +45,10 @@ export default new Vuex.Store({
     },
     setCurrentAlbum(state, payload) {
       state.currentAlbum = payload
+    },
+    addCurrentAlbum(state, payload) {
+      state.currentAlbum = Object.assign({}, state.currentAlbum, { [payload.wikiPageId]: payload })
     }
-  },
-  plugins: [createPersistedState(), sharedMutations({ predicate: ['addProduct', 'removeProduct', 'addAmount'] })]
+  }
+  // plugins: [createPersistedState(), sharedMutations({ predicate: ['addProduct', 'removeProduct', 'addAmount'] })]
 })

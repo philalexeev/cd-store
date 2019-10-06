@@ -28,17 +28,18 @@ import wikijs from 'wikijs';
 
 export default {
   name: 'Album',
+  props: ['selfId'],
   data() {
     return {
       summaryDescription: '',
-      albumKeys: this.$store.state.currentAlbum
+      albumKeys: {}
     }
   },
   computed: {
     addedToCart() {
       let cart = this.$store.state.cart;
       for (let i = 0; i < cart.length; i++) {
-        if ( this.albumKeys.wikiPageId === cart[i].albumId ) {
+        if ( this.albumKeys.wikiPageId === cart[i].selfId ) {
           return true
         }
       }
@@ -46,6 +47,14 @@ export default {
     }
   },
   methods: {
+    setAlbumKeys() {
+      let albumsList = this.$store.state.currentAlbum;
+      for ( let key in albumsList ) {
+        if ( this.selfId == key ) {
+          this.albumKeys = albumsList[key]
+        }
+      }
+    },
     getDescription() {
       let review = document.querySelector('.album__review');
       const cssStyles = 'height: auto;background-image: none;';
@@ -64,9 +73,12 @@ export default {
         albumYear: this.albumKeys.albumYear,
         albumTitle: this.albumKeys.albumTitle,
         price: this.albumKeys.albumPrice,
-        albumId: this.albumKeys.wikiPageId
+        selfId: this.albumKeys.wikiPageId
       })
     }
+  },
+  beforeMount() {
+    this.setAlbumKeys()
   },
   mounted () {
     this.getDescription()
@@ -79,7 +91,6 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /*padding: 50px 20px 50px;*/
     padding: 20px;
 
     @media screen and (min-width: 870px) {
@@ -95,8 +106,6 @@ export default {
   .album__image-wrapper {
     display: inline-block;
     flex-shrink: 0;
-    /*width: 500px;*/
-    /*margin-right: 50px;*/
     width: 100%;
     font-size: 0;
   

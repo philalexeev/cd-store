@@ -5,7 +5,7 @@
 - [ ] fix sorting (rebase it to vuex) => fix state of sorting among page refreshing
 - [ ] find the solution of svg-store (svg-symbols) for vue-cli & import svgsprite to the DOM
 - [ ] fix alt text in img tags
-- [ ] fix open album in new tabs ( maybe try https://github.com/wingify/across-tabs )
+- [ ] fix open album in new tabs
 
 ## Project setup
 ```
