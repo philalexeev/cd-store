@@ -1,7 +1,8 @@
 <template>
   <router-link
     class="product__wrapper"
-    :to="{ name: 'album', params: { selfId: wikiPageId }}"
+    :to="{ name: 'album', query: { selfId: wikiPageId }}"
+    :selfId="wikiPageId"
     @click.native="addCurrentAlbum">
     <div class="product__image">
       <img :src="require(`@/assets/products/${albumCover}`)" alt="">

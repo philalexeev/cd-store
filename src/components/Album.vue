@@ -18,7 +18,7 @@
       <div class="album__heading-wrapper">
         <h1 class="album__heading">{{ albumKeys.albumTitle }}</h1>
       </div>
-      <p class="album__review">{{ summaryDescription }}</p>
+      <p class="album__review" ref="review">{{ summaryDescription }}</p>
     </div>
   </div>
 </template>
@@ -28,7 +28,6 @@ import wikijs from 'wikijs';
 
 export default {
   name: 'Album',
-  props: ['selfId'],
   data() {
     return {
       summaryDescription: '',
@@ -39,7 +38,7 @@ export default {
     addedToCart() {
       let cart = this.$store.state.cart;
       for (let i = 0; i < cart.length; i++) {
-        if ( this.albumKeys.wikiPageId === cart[i].selfId ) {
+        if ( this.albumKeys.wikiPageId === cart[i].wikiPageId ) {
           return true
         }
       }
@@ -50,13 +49,13 @@ export default {
     setAlbumKeys() {
       let albumsList = this.$store.state.currentAlbum;
       for ( let key in albumsList ) {
-        if ( this.selfId == key ) {
+        if ( this.$route.query.selfId == key ) {
           this.albumKeys = albumsList[key]
         }
       }
     },
     getDescription() {
-      let review = document.querySelector('.album__review');
+      let review = this.$refs.review;
       const cssStyles = 'height: auto;background-image: none;';
       wikijs().findById(this.albumKeys.wikiPageId)
         .then(page => page.summary())
@@ -77,11 +76,19 @@ export default {
       })
     }
   },
-  beforeMount() {
-    this.setAlbumKeys()
+  created() {
+    this.setAlbumKeys();
+    window.addEventListener('beforeunload', this.beforeDestroy)
   },
   mounted () {
-    this.getDescription()
+    this.getDescription();
+  },
+  beforeRouteLeave (to, from, next) {
+    this.$store.commit('removeCurrentAlbum', this.$route.query.selfId)
+    next();
+  },
+  beforeDestroy () {
+    this.$store.commit('removeCurrentAlbum', this.$route.query.selfId)
   }
 }
 </script>
