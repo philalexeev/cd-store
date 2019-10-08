@@ -1,9 +1,14 @@
 <template>
   <router-link
     class="product__wrapper"
-    :to="{ name: 'album', query: { selfId: wikiPageId }}"
-    :selfId="wikiPageId"
-    @click.native="addCurrentAlbum">
+    :to="{ name: 'album', query: {
+      albumTitle,
+      bandName,
+      albumYear,
+      productPrice,
+      wikiPageId,
+      albumCover
+    }}">
     <div class="product__image">
       <img :src="require(`@/assets/products/${albumCover}`)" alt="">
     </div>
@@ -29,36 +34,20 @@ export default {
       default: 'logo.png'
     }
   },
-  methods: {
-    addToCart() {
-      return this.$store.commit('addProduct', {
+  data() {
+    return {
+      albumKeys: {
+        albumTitle: this.albumTitle,
         bandName: this.bandName,
         albumYear: this.albumYear,
-        albumTitle: this.albumTitle,
-        price: this.albumPrice,
-        albumId: this.wikiPageId
-      })
-    },
-    setCurrentAlbum() {
-      return this.$store.commit('setCurrentAlbum', {
-        albumTitle: this.albumTitle,
-        bandName: this.bandName,
-        albumPrice: this.productPrice,
+        productPrice: this.productPrice,
         wikiPageId: this.wikiPageId,
-        albumYear: this.albumYear,
-        albumCover: `${this.albumCover ? this.albumCover : 'logo.png'}`
-      })
-    },
-    addCurrentAlbum() {
-      return this.$store.commit('addCurrentAlbum', {
-        albumTitle: this.albumTitle,
-        bandName: this.bandName,
-        albumPrice: this.productPrice,
-        wikiPageId: this.wikiPageId,
-        albumYear: this.albumYear,
-        albumCover: `${this.albumCover ? this.albumCover : 'logo.png'}`
-      })
+        albumCover: this.albumCover
+      }
     }
+  },
+  mounted () {
+    console.log(this.$props)
   }
 }
 </script>
@@ -105,11 +94,11 @@ export default {
     margin-top: 5px;
     font-size: 14px;
     font-weight: bold;
-    
+
     @media screen and (min-width: 480px) {
       font-size: 18px;
     }
-    
+
     @media screen and (min-width: 580px) {
       font-size: 20px;
     }
@@ -127,7 +116,7 @@ export default {
     font-size: 20px;
     font-weight: bold;
     color: #FF5C00;
-  
+
     @media screen and (min-width: 580px) {
       font-size: 24px;
     }

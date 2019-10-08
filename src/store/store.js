@@ -12,7 +12,6 @@ export default new Vuex.Store({
     sortedProducts: [],
     cart: [],
     totalSum: 0,
-    currentAlbum: {},
     isMenuOpened: false
   },
   getters: {
@@ -20,9 +19,9 @@ export default new Vuex.Store({
       state.totalSum = 0;
       for ( let i = 0; i < state.cart.length; i++ ) {
         if ( state.cart[i].amount ) {
-          state.totalSum += parseInt(state.cart[i].price) * state.cart[i].amount
+          state.totalSum += parseInt(state.cart[i].albumPrice) * state.cart[i].amount
         } else {
-          state.totalSum += parseInt(state.cart[i].price)
+          state.totalSum += parseInt(state.cart[i].albumPrice)
         }
       }
       return state.totalSum;
@@ -42,13 +41,7 @@ export default new Vuex.Store({
       document.body.classList.toggle('blocked')
       document.querySelector('.header__nav').classList.toggle('header__nav--open')
       state.isMenuOpened = !state.isMenuOpened
-    },
-    addCurrentAlbum(state, payload) {
-      state.currentAlbum = Object.assign({}, state.currentAlbum, { [payload.wikiPageId]: payload })
-    },
-    removeCurrentAlbum(state, payload) {
-      delete state.currentAlbum[payload]
     }
   },
-  plugins: [createPersistedState()]
+  plugins: [createPersistedState(), sharedMutations({ predicate: ['addProduct', 'removeProduct', 'addAmount'] })]
 })

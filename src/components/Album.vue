@@ -31,10 +31,20 @@ export default {
   data() {
     return {
       summaryDescription: '',
-      albumKeys: {}
+      currentQuery: this.$route.query
     }
   },
   computed: {
+    albumKeys() {
+      return {
+        albumCover: this.currentQuery.albumCover,
+        albumTitle: this.currentQuery.albumTitle,
+        albumYear: this.currentQuery.albumYear,
+        bandName: this.currentQuery.bandName,
+        albumPrice: this.currentQuery.productPrice,
+        wikiPageId: this.currentQuery.wikiPageId
+      }
+    },
     addedToCart() {
       let cart = this.$store.state.cart;
       for (let i = 0; i < cart.length; i++) {
@@ -46,14 +56,6 @@ export default {
     }
   },
   methods: {
-    setAlbumKeys() {
-      let albumsList = this.$store.state.currentAlbum;
-      for ( let key in albumsList ) {
-        if ( this.$route.query.selfId == key ) {
-          this.albumKeys = albumsList[key]
-        }
-      }
-    },
     getDescription() {
       let review = this.$refs.review;
       const cssStyles = 'height: auto;background-image: none;';
@@ -66,29 +68,11 @@ export default {
     },
     addToCart() {
       this.$refs.btn.disabled = true;
-      return this.$store.commit('addProduct', {
-        albumCover: this.albumKeys.albumCover,
-        bandName: this.albumKeys.bandName,
-        albumYear: this.albumKeys.albumYear,
-        albumTitle: this.albumKeys.albumTitle,
-        price: this.albumKeys.albumPrice,
-        selfId: this.albumKeys.wikiPageId
-      })
+      return this.$store.commit('addProduct', this.albumKeys)
     }
-  },
-  created() {
-    this.setAlbumKeys();
-    window.addEventListener('beforeunload', this.beforeDestroy)
   },
   mounted () {
     this.getDescription();
-  },
-  beforeRouteLeave (to, from, next) {
-    this.$store.commit('removeCurrentAlbum', this.$route.query.selfId)
-    next();
-  },
-  beforeDestroy () {
-    this.$store.commit('removeCurrentAlbum', this.$route.query.selfId)
   }
 }
 </script>
@@ -115,7 +99,7 @@ export default {
     flex-shrink: 0;
     width: 100%;
     font-size: 0;
-  
+
     @media screen and (min-width: 360px) {
       width: 320px;
     }
@@ -197,7 +181,7 @@ export default {
     background-repeat: no-repeat;
     background-size: 160px 30px;
     background-position: center top;
-  
+
     @media screen and (min-width: 870px) {
       font-size: 20px;
     }
@@ -207,7 +191,7 @@ export default {
     width: 100%;
     padding: 0;
     margin-bottom: 20px;
-  
+
     @media screen and (min-width: 870px) {
       margin-bottom: 0;
     }

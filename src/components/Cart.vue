@@ -10,7 +10,7 @@
         :bandName="item.bandName"
         :albumYear="item.albumYear"
         :albumTitle="item.albumTitle"
-        :price="item.price"
+        :price="item.albumPrice"
         :index="index"
         :albumCover="item.albumCover"
       ></cart-item>
