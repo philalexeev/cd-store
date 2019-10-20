@@ -149,7 +149,7 @@ export default {
   }
 
   .burger-btn__cart--not-empty {
-    background-color: #FF5C00;
+    background-color: #ec4404;
   }
 
   .burger-btn__cart-icon {
@@ -226,6 +226,6 @@ export default {
   }
 
   .menu-item--active .menu__link {
-    color: orangered;
+    color: #ec4404;
   }
 </style>

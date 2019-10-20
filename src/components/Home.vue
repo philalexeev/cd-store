@@ -96,6 +96,6 @@ export default {
     transform: translateY(-50%);
     display: block;
     height: 4px;
-    background-color: #FF5C00;
+    background-color: #ec4404;
   }
 </style>

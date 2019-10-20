@@ -32,7 +32,7 @@
             :albumTitle="album.title"
             :bandName="album.band"
             :albumYear="album.year"
-            :productPrice="album.price"
+            :albumPrice="album.price"
             :wikiPageId="album.wikiPageId"
             :albumCover="`${album.coverUrl ? album.coverUrl : 'logo.png'}`"
           ></app-product-item>

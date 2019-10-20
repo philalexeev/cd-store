@@ -2,7 +2,7 @@
   <li class="cart__item">
     <div class="cart__item-description clearfix">
       <div class="cart__item-image-wrapper">
-        <img class="cart__item-image" :src="require(`@/assets/products/${albumCover}`)" alt="111">
+        <img class="cart__item-image" :src="require(`@/assets/products/${albumCover}`)" :alt="`${bandName} - ${albumTitle}`">
       </div>
       <div class="cart__item-details">
         <div class="cart__text cart__band-name cart__block">{{ bandName }}</div>
@@ -44,9 +44,6 @@ export default {
       amount: 1,
       cart: this.$store.state.cart
     }
-  },
-  computed: {
-
   },
   methods: {
     removeItem(index) {
@@ -143,7 +140,7 @@ export default {
 
   .cart__link {
     display: block;
-    color: #FF5C00;
+    color: #ec4404;
     font-size: 16px;
     text-decoration: none;
 
@@ -199,7 +196,7 @@ export default {
     vertical-align: middle;
 
     &:hover .cart__amount-btn-icon {
-      fill: #FF5C00;
+      fill: #ec4404;
     }
   }
 

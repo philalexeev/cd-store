@@ -1,7 +1,7 @@
 <template>
   <div class="container album">
     <div class="album__image-wrapper">
-      <img class="album__image" :src="require(`@/assets/products/${albumKeys.albumCover}`)" alt="111">
+      <img class="album__image" :src="require(`@/assets/products/${albumKeys.albumCover}`)" :alt="`${albumKeys.bandName} - ${albumKeys.albumTitle}`">
       <button
         :class="['btn', 'btn--large', addedToCart ? 'btn--done' : 'btn--orange']"
         :disabled="addedToCart"
@@ -30,20 +30,16 @@ export default {
   name: 'Album',
   data() {
     return {
-      summaryDescription: '',
-      currentQuery: this.$route.query
+      summaryDescription: ''
     }
   },
   computed: {
     albumKeys() {
-      return {
-        albumCover: this.currentQuery.albumCover,
-        albumTitle: this.currentQuery.albumTitle,
-        albumYear: this.currentQuery.albumYear,
-        bandName: this.currentQuery.bandName,
-        albumPrice: this.currentQuery.productPrice,
-        wikiPageId: this.currentQuery.wikiPageId
+      let propsObj = {};
+      for ( let key in this.$route.query) {
+        propsObj[key] = this.$route.query[key]
       }
+      return propsObj
     },
     addedToCart() {
       let cart = this.$store.state.cart;
@@ -146,7 +142,7 @@ export default {
     flex-shrink: 0;
     padding: 15px;
     font-size: 24px;
-    background-color: darken(#FF5C00, 10%);
+    background-color: darken(#ec4404, 10%);
   }
 
   .btn--done .album__price {

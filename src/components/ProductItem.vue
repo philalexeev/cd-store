@@ -5,18 +5,18 @@
       albumTitle,
       bandName,
       albumYear,
-      productPrice,
+      albumPrice,
       wikiPageId,
       albumCover
     }}">
     <div class="product__image">
-      <img :src="require(`@/assets/products/${albumCover}`)" alt="">
+      <img :src="require(`@/assets/products/${albumCover}`)" :alt="`${bandName} - ${albumTitle}`">
     </div>
     <div class="product__description">
       <h2 class="product__album-title product__text">{{ albumTitle }}</h2>
       <h3 class="product__band-name product__text">{{ bandName }}</h3>
       <h3 class="product__album-year product__text">{{ albumYear }}</h3>
-      <p class="product__album-price">{{ productPrice }}$</p>
+      <p class="product__album-price">{{ albumPrice }}$</p>
     </div>
   </router-link>
 </template>
@@ -28,26 +28,11 @@ export default {
     albumTitle: String,
     bandName: String,
     albumYear: [String, Number],
-    productPrice: [String, Number],
+    albumPrice: [String, Number],
     wikiPageId: Number,
     albumCover: {
       default: 'logo.png'
     }
-  },
-  data() {
-    return {
-      albumKeys: {
-        albumTitle: this.albumTitle,
-        bandName: this.bandName,
-        albumYear: this.albumYear,
-        productPrice: this.productPrice,
-        wikiPageId: this.wikiPageId,
-        albumCover: this.albumCover
-      }
-    }
-  },
-  mounted () {
-    console.log(this.$props)
   }
 }
 </script>
@@ -115,7 +100,7 @@ export default {
     align-self: flex-end;
     font-size: 20px;
     font-weight: bold;
-    color: #FF5C00;
+    color: #ec4404;
 
     @media screen and (min-width: 580px) {
       font-size: 24px;

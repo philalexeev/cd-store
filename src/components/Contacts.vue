@@ -88,7 +88,7 @@
     text-decoration: underline;
 
     &:hover {
-      color: #FF5C00;
+      color: #ec4404;
     }
   }
 
