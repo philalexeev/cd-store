@@ -1,4 +1,7 @@
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/cd-store/'
+    : '/',
   chainWebpack: config => {
     // Images optimization
     config.module
