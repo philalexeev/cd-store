@@ -55,11 +55,14 @@ export default {
     getDescription() {
       let review = this.$refs.review;
       const cssStyles = 'height: auto;background-image: none;';
-      wikijs().findById(this.albumKeys.wikiPageId)
-        .then(page => page.summary())
-        .then(response => {
+      fetch(`https://en.wikipedia.org/w/api.php?format=json&action=query&generator=prefixsearch&prop=extracts&exlimit=10&exintro&explaintext&gpslimit=10&gpssearch=${this.albumKeys.albumTitle}&origin=*`, {
+        method: 'GET'
+      })
+        .then(response => response.json())
+        .then(data => {
+          let summary = data.query.pages[this.albumKeys.wikiPageId].extract;
           review.style.cssText = cssStyles;
-          this.summaryDescription = response
+          this.summaryDescription = summary;
         })
     },
     addToCart() {

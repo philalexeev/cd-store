@@ -14,7 +14,7 @@
       "year": 1963,
       "coverUrl": "the beatles/wtb.jpg",
       "price": 50,
-      "wikiPageId": 37530567
+      "wikiPageId": 74840
     },
     {
       "band": "The Beatles",
@@ -30,7 +30,7 @@
       "year": 1964,
       "coverUrl": "the beatles/bfs.jpg",
       "price": 52,
-      "wikiPageId": 163968
+      "wikiPageId": 74914
     },
     {
       "band": "The Beatles",
@@ -194,11 +194,11 @@
     },
     {
       "band": "Pink Floyd",
-      "title": "Music from the Film More",
+      "title": "More (soundtrack)",
       "year": 1969,
       "coverUrl": "pink floyd/more.jpg",
       "price": 44,
-      "wikiPageId": 17845354
+      "wikiPageId": 417935
     },
     {
       "band": "Pink Floyd",
