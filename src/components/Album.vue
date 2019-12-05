@@ -24,8 +24,6 @@
 </template>
 
 <script>
-import wikijs from 'wikijs';
-
 export default {
   name: 'Album',
   data() {
