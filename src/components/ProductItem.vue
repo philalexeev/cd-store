@@ -10,9 +10,12 @@
       albumCover
     }}">
     <div class="product__image">
-      <img
-        :src="require(`@/assets/products/${albumCover}`)"
-        :alt="`${bandName} - ${albumTitle}`">
+      <picture>
+        <source type="image/webp" :srcset="require(`@/assets/products/${albumCover}.webp`)">
+        <img
+          :src="require(`@/assets/products/${albumCover}.jpg`)"
+          :alt="`${bandName} - ${albumTitle}`">
+      </picture>
     </div>
     <div class="product__description">
       <h2 class="product__album-title product__text">{{ albumTitle }}</h2>
