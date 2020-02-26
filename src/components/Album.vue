@@ -174,7 +174,7 @@ export default {
     font-size: 16px;
     line-height: 1.5;
     text-align: justify;
-    background-image: url('../assets/misc/preloader.svg');
+    background-image: url('../assets/icons/preloader.svg');
     background-repeat: no-repeat;
     background-size: 160px 30px;
     background-position: center top;

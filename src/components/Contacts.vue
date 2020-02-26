@@ -17,9 +17,7 @@
       <ul class="contacts__links">
         <li class="contacts__links-item">
           <a class="contacts__link" href="#">
-            <svg class="contacts__link-icon contacts__link-twitter">
-              <use xlink:href="#twitter"></use>
-            </svg>
+            <SvgIcon iconName="twitter" className="contacts__link-icon contacts__link-twitter"></SvgIcon>
           </a>
         </li>
         <li class="contacts__links-item">
@@ -46,9 +44,14 @@
 </template>
 
 <script>
-  export default {
-    name: 'Contacts'
+import SvgIcon from './SvgIcon'
+
+export default {
+  name: 'Contacts',
+  components: {
+    SvgIcon: SvgIcon
   }
+}
 </script>
 
 <style lang="scss">
@@ -64,7 +67,7 @@
   .contacts__map {
     height: 500px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    background-image: url('../assets/misc/preloader.svg');
+    background-image: url('../assets/icons/preloader.svg');
     background-size: 160px 30px;
     background-position: center;
     background-repeat: no-repeat;

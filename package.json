@@ -29,7 +29,11 @@
     "eslint-plugin-vue": "^5.0.0",
     "image-webpack-loader": "^6.0.0",
     "node-sass": "^4.9.0",
+    "posthtml-render": "^1.1.5",
+    "postsvg": "^2.2.7",
     "sass-loader": "^7.1.0",
+    "svg-parser": "^2.0.3",
+    "svg-sprite-loader": "^4.2.1",
     "vue-template-compiler": "^2.6.10",
     "webpack-svgstore-plugin": "^4.1.0"
   },
