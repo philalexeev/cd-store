@@ -1,13 +1,19 @@
 <!-- Компонент стилизуемой SVG-иконки -->
 
-<template v-html="svgString" :class="className">
+<template>
+  <svg
+    :class="className"
+    v-html="svgInner"
+    v-bind="attributes"
+  />
 </template>
 
 <script>
+import { parse } from 'svg-parser'
+
 export default {
   name: 'SvgIcon',
   props: {
-    // Имя файла (без расширения)
     iconName: {
       type: String,
       required: true
@@ -17,23 +23,21 @@ export default {
     }
   },
   data: () => ({
-    // Строка с содержимым SVG-файла
-    svgString: ''
+    svgString: '',
+    attributes: {},
+    svgInner: ''
   }),
   computed: {
-    // Путь расположения SVG-файла
     filepath () {
       return require(`@/assets/icons/${this.iconName}.svg`)
     }
   },
   watch: {
-    // При изменении файла, перезагружаем его
     filepath: {
       immediate: true,
       handler: 'loadFile'
     }
   },
-  // Загрузка содержимого SVG файла
   created () {
     this.loadFile()
   },
@@ -41,7 +45,26 @@ export default {
     loadFile () {
       fetch(this.filepath)
         .then(response => response.text())
-        .then(svg => (this.svgString = svg))
+        .then(svg => {
+          this.svgString = svg
+          this.getSvgAttrs()
+          this.getSvgInner()
+        })
+    },
+    getSvgAttrs () {
+      let parsedSvg = parse(this.svgString)
+
+      let parsedSvgProps = parsedSvg.children[0].properties;
+      for (let key in parsedSvgProps) {
+        this.attributes[key] = parsedSvgProps[key]
+      }
+    },
+    getSvgInner () {
+      let startIndex
+      let endIndex
+      startIndex = this.svgString.indexOf('>')
+      endIndex = this.svgString.indexOf('</svg')
+      this.svgInner = this.svgString.slice(startIndex + 1, endIndex)
     }
   }
 }

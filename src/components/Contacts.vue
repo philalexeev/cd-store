@@ -17,21 +17,17 @@
       <ul class="contacts__links">
         <li class="contacts__links-item">
           <a class="contacts__link" href="#">
-            <SvgIcon iconName="twitter" className="contacts__link-icon contacts__link-twitter"></SvgIcon>
+            <SvgIcon iconName="twitter" className="contacts__link-icon contacts__link-twitter"/>
           </a>
         </li>
         <li class="contacts__links-item">
           <a class="contacts__link" href="#">
-            <svg class="contacts__link-icon contacts__link-instagram">
-              <use xlink:href="#instagram"></use>
-            </svg>
+            <SvgIcon iconName="instagram" className="contacts__link-icon contacts__link-instagram"/>
           </a>
         </li>
         <li class="contacts__links-item">
           <a class="contacts__link" href="#">
-            <svg class="contacts__link-icon contacts__link-facebook">
-              <use xlink:href="#facebook"></use>
-            </svg>
+            <SvgIcon iconName="facebook" className="contacts__link-icon contacts__link-facebook"/>
           </a>
         </li>
       </ul>
