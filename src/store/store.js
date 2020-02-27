@@ -41,6 +41,11 @@ export default new Vuex.Store({
       document.body.classList.toggle('blocked')
       document.querySelector('.header__nav').classList.toggle('header__nav--open')
       state.isMenuOpened = !state.isMenuOpened
+    },
+    checkout(state) {
+      while(state.cart.length > 0) {
+        state.cart.pop();
+      }
     }
   },
   plugins: [createPersistedState(), sharedMutations({ predicate: ['addProduct', 'removeProduct', 'addAmount'] })]

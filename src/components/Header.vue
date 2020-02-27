@@ -16,9 +16,7 @@
             active-class="burger-btn__cart-link--active"
             class="burger-btn__cart-link"
             @click.native="routeClick">
-          <svg class="burger-btn__cart-icon">
-            <use xlink:href="#cart"></use>
-          </svg>
+          <SvgIcon className="burger-btn__cart-icon" iconName="cart"/>
           <span
             class="burger-btn__cart-link-number"
             :class="{'burger-btn__cart--not-empty': emptyCart}">
@@ -63,6 +61,8 @@
 </template>
 
 <script>
+import SvgIcon from './SvgIcon'
+
 export default {
   name: 'Header',
   data() {
@@ -74,6 +74,9 @@ export default {
     emptyCart() {
       return !!this.cart.length
     }
+  },
+  components: {
+    SvgIcon
   },
   methods: {
     toggleMenu() {

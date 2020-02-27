@@ -1,7 +1,12 @@
 <template>
   <div class="container album">
     <div class="album__image-wrapper">
-      <img class="album__image" :src="require(`@/assets/products/${albumKeys.albumCover}`)" :alt="`${albumKeys.bandName} - ${albumKeys.albumTitle}`">
+      <picture class="album__image">
+        <source type="image/webp" :srcset="require(`@/assets/products/${albumKeys.albumCover}.webp`)">
+        <img
+          :src="require(`@/assets/products/${albumKeys.albumCover}.jpg`)"
+          :alt="`${albumKeys.bandName} - ${albumKeys.albumTitle}`">
+      </picture>
       <button
         :class="['btn', 'btn--large', addedToCart ? 'btn--done' : 'btn--orange']"
         :disabled="addedToCart"
@@ -181,6 +186,11 @@ export default {
 
     @media screen and (min-width: 870px) {
       font-size: 20px;
+      background-position: 490px top;
+    }
+
+    @media screen and (min-width: 1200px) {
+      background-position: center top;
     }
   }
 

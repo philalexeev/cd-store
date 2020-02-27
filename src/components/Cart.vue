@@ -13,8 +13,9 @@
         :price="item.albumPrice"
         :index="index"
         :albumCover="item.albumCover"
-      ></cart-item>
+      />
     </ul>
+    <button class="btn btn--orange btn--large" @click="checkout" v-if="cart.length !== 0">Checkout</button>
   </div>
 </template>
 
@@ -35,6 +36,12 @@ export default {
   },
   components: {
     'cart-item': CartItem
+  },
+  methods: {
+    checkout() {
+      this.cart = [];
+      this.$store.commit('checkout')
+    }
   }
 }
 </script>
@@ -42,6 +49,7 @@ export default {
 <style scoped lang="scss">
   .cart {
     padding-top: 20px;
+    text-align: right;
   }
 
   .component__heading-wrapper {
@@ -58,6 +66,7 @@ export default {
   .cart__table {
     width: 100%;
     margin-top: 20px;
+    margin-bottom: 40px;
     list-style: none;
   }
 

@@ -1,8 +1,6 @@
 # vue || cd-store
 
-- [ ] fix images/ add picture tag
-- [ ] add checkout btn 
-- [ ] fix preloader on all widths
+- [ ] add back to store link
 
 ## TODO
 

@@ -35,7 +35,7 @@
             :albumPrice="album.price"
             :wikiPageId="album.wikiPageId"
             :albumCover="`${album.coverUrl ? album.coverUrl : 'logo.png'}`"
-          ></app-product-item>
+          />
         </li>
       </ul>
     </div>
@@ -118,13 +118,13 @@ export default {
     align-items: center;
     padding-bottom: 40px;
   }
-  
+
   .products__controls {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-  
+
     @media screen and (min-width: 580px) {
       flex-direction: row;
       justify-content: space-between;
@@ -135,20 +135,20 @@ export default {
   .products__search-wrapper,
   .products__select-wrapper {
     width: 100%;
-  
+
     @media screen and (min-width: 580px) {
       width: 250px;
     }
-  
+
     @media screen and (min-width: 870px) {
       width: 300px;
     }
-  
+
     @media screen and (min-width: 1500px) {
       width: 350px;
     }
   }
-  
+
   .product__input {
     font-size: 20px;
     width: 100%;
@@ -158,7 +158,7 @@ export default {
   .products__sorting-select {
     margin-top: 10px;
     cursor: pointer;
-  
+
     @media screen and (min-width: 580px) {
       margin-top: 0;
     }
@@ -171,13 +171,13 @@ export default {
     width: 100%;
     list-style: none;
   }
-  
+
   .products__list-item {
     display: flex;
     align-items: stretch;
     width: 47%;
     margin-right: 6%;
-  
+
     &:nth-child(2n) {
       margin-right: 0;
     }

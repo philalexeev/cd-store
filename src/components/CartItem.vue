@@ -2,7 +2,12 @@
   <li class="cart__item">
     <div class="cart__item-description clearfix">
       <div class="cart__item-image-wrapper">
-        <img class="cart__item-image" :src="require(`@/assets/products/${albumCover}`)" :alt="`${bandName} - ${albumTitle}`">
+        <picture class="cart__item-image">
+          <source type="image/webp" :srcset="require(`@/assets/products/${albumCover}.webp`)">
+          <img
+            :src="require(`@/assets/products/${albumCover}.jpg`)"
+            :alt="`${bandName} - ${albumTitle}`">
+        </picture>
       </div>
       <div class="cart__item-details">
         <div class="cart__text cart__band-name cart__block">{{ bandName }}</div>
@@ -16,15 +21,11 @@
     <div class="cart__amount">
       <div class="cart__amount-wrapper">
         <button class="cart__amount-btn cart__amount-btn-decrease" @click="decreaseAmount(index)">
-          <svg class="cart__amount-btn-icon">
-            <use xlink:href="#minus"></use>
-          </svg>
+          <SvgIcon className="cart__amount-btn-icon" iconName="minus"/>
         </button>
         <span class="cart__amount-number">{{ amount }}</span>
         <button class="cart__amount-btn cart__amount-btn-increase" @click="increaseAmount(index)">
-          <svg class="cart__amount-btn-icon">
-            <use xlink:href="#plus"></use>
-          </svg>
+          <SvgIcon className="cart__amount-btn-icon" iconName="plus"/>
         </button>
       </div>
       <div class="cart__price">
@@ -36,6 +37,8 @@
 </template>
 
 <script>
+import SvgIcon from './SvgIcon'
+
 export default {
   name: 'CartItem',
   props: ['bandName', 'albumYear', 'albumTitle', 'price', 'index', 'albumCover'],
@@ -44,6 +47,9 @@ export default {
       amount: 1,
       cart: this.$store.state.cart
     }
+  },
+  components: {
+    SvgIcon
   },
   methods: {
     removeItem(index) {
@@ -85,6 +91,7 @@ export default {
     padding: 10px 10px 10px 0;
     font-size: 16px;
     line-height: 1;
+    text-align: left;
 
     &-remove {
       display: flex;

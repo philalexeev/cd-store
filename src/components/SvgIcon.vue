@@ -1,10 +1,8 @@
-<!-- Компонент стилизуемой SVG-иконки -->
-
 <template>
   <svg
     :class="className"
-    v-html="svgInner"
     v-bind="attributes"
+    v-html="svgInner"
   />
 </template>
 
@@ -30,12 +28,6 @@ export default {
   computed: {
     filepath () {
       return require(`@/assets/icons/${this.iconName}.svg`)
-    }
-  },
-  watch: {
-    filepath: {
-      immediate: true,
-      handler: 'loadFile'
     }
   },
   created () {
