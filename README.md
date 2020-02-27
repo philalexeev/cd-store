@@ -1,6 +1,7 @@
 # vue || cd-store
 
-- [ ] add back to store link
+- [ ] add back to store link with saving scroll position
+- [ ] add GOTOTOP btn
 
 ## TODO
 
