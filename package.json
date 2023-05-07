@@ -22,7 +22,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-plugin-eslint": "^3.9.0",
-    "@vue/cli-service": "^3.9.0",
+    "@vue/cli-service": "^5.0.8",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
@@ -33,7 +33,7 @@
     "postsvg": "^2.2.7",
     "sass-loader": "^7.1.0",
     "svg-parser": "^2.0.3",
-    "svg-sprite-loader": "^4.2.1",
+    "svg-sprite-loader": "^6.0.11",
     "vue-template-compiler": "^2.6.10",
     "webpack-svgstore-plugin": "^4.1.0"
   },
